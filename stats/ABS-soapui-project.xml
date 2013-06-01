@@ -1,0 +1,1725 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project activeEnvironment="Default" name="ABS" resourceRoot="${projectDir}" soapui-version="4.5.2" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="ABS.Stat_x0020_SDMX_x0020_web_x0020_serviceSoap" type="wsdl" bindingName="{http://stats.oecd.org/OECDStatWS/SDMX/}ABS.Stat_x0020_SDMX_x0020_web_x0020_serviceSoap" soapVersion="1_1" anonymous="optional" definition="http://stat.abs.gov.au/sdmxws/sdmx.asmx?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://stat.abs.gov.au/sdmxws/sdmx.asmx</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://stats.oecd.org/OECDStatWS/SDMX/GetCompactData" name="GetCompactData" bindingOperationName="GetCompactData" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://stat.abs.gov.au/sdmxws/sdmx.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:sdmx="http://stats.oecd.org/OECDStatWS/SDMX/">
+   <soap:Header/>
+   <soap:Body>
+      <sdmx:GetCompactData>
+         <!--Optional:-->
+     <sdmx:QueryMessage xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/query" xmlns:message="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message" xsi:schemaLocation="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/query http://www.sdmx.org/docs/2_0/SDMXQuery.xsd http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message http://www.sdmx.org/docs/2_0/SDMXMessage.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+     <message:QueryMessage xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/query" xmlns:message="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message" xsi:schemaLocation="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/query http://www.sdmx.org/docs/2_0/SDMXQuery.xsd http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message http://www.sdmx.org/docs/2_0/SDMXMessage.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Header xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message">
+		<ID>none</ID>
+		<Test>false</Test>
+		<Truncated>false</Truncated>
+		<Prepared>2013-02-14T08:40:31</Prepared>
+		<Sender id="YourID">
+			<Name xml:lang="en">Your English Name</Name>
+		</Sender>
+		<Receiver id="ABS">
+			<Name xml:lang="en">Australian Bureau of Statistics</Name>
+			<Name xml:lang="fr">Australian Bureau of Statistics</Name>
+		</Receiver>
+		<!--
+    <message:DataSetAction>Replace</message:DataSetAction>
+    <message:ReportingBegin>2007-02-22T00:00:00</message:ReportingBegin>
+    -->
+	</Header>
+  <Query xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message">
+    <DataWhere xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/query">
+      <And>
+        <DataSet>NRP7</DataSet>
+        <Dimension id="ASGC_2008">0</Dimension>
+        <Dimension id="ASGC_2008">1</Dimension>
+        <Dimension id="ASGC_2008">2</Dimension>
+        <Dimension id="ASGC_2008">3</Dimension>
+        <Dimension id="ASGC_2008">4</Dimension>
+        <Dimension id="ASGC_2008">5</Dimension>
+        <Dimension id="ASGC_2008">6</Dimension>
+        <Dimension id="ASGC_2008">7</Dimension>
+        <Dimension id="ASGC_2008">8</Dimension>
+        <Dimension id="FREQUENCY">A</Dimension>
+        <Dimension id="DATAITEM">19</Dimension>
+        <Attribute id="TIME_FORMAT">P1Y</Attribute>
+        <Time>
+          <StartTime>2004</StartTime>
+          <EndTime>2010</EndTime>
+        </Time>
+      </And>
+    </DataWhere>
+  </Query>
+</message:QueryMessage>
+         </sdmx:QueryMessage>
+      </sdmx:GetCompactData>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://stats.oecd.org/OECDStatWS/SDMX/GetCompactData"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation isOneWay="false" action="http://stats.oecd.org/OECDStatWS/SDMX/GetDatasetMetadata" name="GetDatasetMetadata" bindingOperationName="GetDatasetMetadata" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://stat.abs.gov.au/sdmxws/sdmx.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sdmx="http://stats.oecd.org/OECDStatWS/SDMX/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sdmx:GetDatasetMetadata>
+         <!--Optional:-->
+         <sdmx:QueryMessage>
+            <!--You may enter ANY elements at this point-->
+         </sdmx:QueryMessage>
+      </sdmx:GetDatasetMetadata>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://stats.oecd.org/OECDStatWS/SDMX/GetDatasetMetadata"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation isOneWay="false" action="http://stats.oecd.org/OECDStatWS/SDMX/GetDataStructureDefinition" name="GetDataStructureDefinition" bindingOperationName="GetDataStructureDefinition" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://stat.abs.gov.au/sdmxws/sdmx.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:sdmx="http://stats.oecd.org/OECDStatWS/SDMX/">
+   <soap:Header/>
+   <soap:Body>
+      <sdmx:GetDataStructureDefinition>
+         <sdmx:QueryMessage>
+            <message:QueryMessage xsi:schemaLocation="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/query http://www.sdmx.org/docs/2_0/SDMXQuery.xsd http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message http://www.sdmx.org/docs/2_0/SDMXMessage.xsd" xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/query" xmlns:message="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+               <Header xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message">
+                  <Receiver id="ABS"/>
+               </Header>
+               <message:Query>
+                  <KeyFamilyWhere>
+                     <Or>
+                        <KeyFamily><!--NRP7-->BA_SA2</KeyFamily>
+                     </Or>
+                  </KeyFamilyWhere>
+               </message:Query>
+            </message:QueryMessage>
+         </sdmx:QueryMessage>
+      </sdmx:GetDataStructureDefinition>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://stats.oecd.org/OECDStatWS/SDMX/GetDataStructureDefinition"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation isOneWay="false" action="http://stats.oecd.org/OECDStatWS/SDMX/GetDimensionMemberMetadata" name="GetDimensionMemberMetadata" bindingOperationName="GetDimensionMemberMetadata" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://stat.abs.gov.au/sdmxws/sdmx.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sdmx="http://stats.oecd.org/OECDStatWS/SDMX/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sdmx:GetDimensionMemberMetadata>
+         <!--Optional:-->
+         <sdmx:QueryMessage>
+            <!--You may enter ANY elements at this point-->
+         </sdmx:QueryMessage>
+      </sdmx:GetDimensionMemberMetadata>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://stats.oecd.org/OECDStatWS/SDMX/GetDimensionMemberMetadata"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation isOneWay="false" action="http://stats.oecd.org/OECDStatWS/SDMX/GetDimensionMetadata" name="GetDimensionMetadata" bindingOperationName="GetDimensionMetadata" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://stat.abs.gov.au/sdmxws/sdmx.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sdmx="http://stats.oecd.org/OECDStatWS/SDMX/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sdmx:GetDimensionMetadata>
+         <!--Optional:-->
+         <sdmx:QueryMessage>
+            <!--You may enter ANY elements at this point-->
+         </sdmx:QueryMessage>
+      </sdmx:GetDimensionMetadata>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://stats.oecd.org/OECDStatWS/SDMX/GetDimensionMetadata"/></con:call></con:operation><con:operation isOneWay="false" action="http://stats.oecd.org/OECDStatWS/SDMX/GetGenericData" name="GetGenericData" bindingOperationName="GetGenericData" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="NRP7-UnemploymentNumbers"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://stat.abs.gov.au/sdmxws/sdmx.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sdmx="http://stats.oecd.org/OECDStatWS/SDMX/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sdmx:GetGenericData>
+         <!--Optional:-->
+         <sdmx:QueryMessage>
+            <message:QueryMessage xsi:schemaLocation="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/query http://www.sdmx.org/docs/2_0/SDMXQuery.xsd http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message http://www.sdmx.org/docs/2_0/SDMXMessage.xsd" xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/query" xmlns:message="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+               <Header xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message">
+                  <ID>none</ID>
+                  <Test>false</Test>
+                  <Truncated>false</Truncated>
+                  <Prepared>2013-06-01T18:27:03</Prepared>
+                  <Sender id="YourID">
+                     <Name xml:lang="en">Your English Name</Name>
+                  </Sender>
+                  <Receiver id="ABS">
+                     <Name xml:lang="en">Australian Bureau of Statistics</Name>
+                     <Name xml:lang="fr">Australian Bureau of Statistics</Name>
+                  </Receiver>
+               </Header>
+               <Query xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message">
+                  <DataWhere xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/query">
+                     <And>
+                        <DataSet>NRP7</DataSet>
+                        <Dimension id="DATAITEM">19</Dimension>
+                        <Dimension id="FREQUENCY">A</Dimension>
+                        <Attribute id="TIME_FORMAT">P1Y</Attribute>
+                        <Time>
+                           <StartTime>2004</StartTime>
+                           <EndTime>2010</EndTime>
+                        </Time>
+                        <Or>
+                           <Dimension id="ASGC_2008">0</Dimension>
+                           <Dimension id="ASGC_2008">1</Dimension>
+                           <Dimension id="ASGC_2008">2</Dimension>
+                           <Dimension id="ASGC_2008">3</Dimension>
+                           <Dimension id="ASGC_2008">4</Dimension>
+                           <Dimension id="ASGC_2008">5</Dimension>
+                           <Dimension id="ASGC_2008">6</Dimension>
+                           <Dimension id="ASGC_2008">7</Dimension>
+                           <Dimension id="ASGC_2008">8</Dimension>
+                           <Dimension id="ASGC_2008">9</Dimension>
+                           <Dimension id="ASGC_2008">10</Dimension>
+                        </Or>
+                     </And>
+                  </DataWhere>
+               </Query>
+            </message:QueryMessage>
+         </sdmx:QueryMessage>
+      </sdmx:GetGenericData>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://stats.oecd.org/OECDStatWS/SDMX/GetGenericData"/><con:wsrmConfig version="1.2"/></con:call><con:call name="2"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://stat.abs.gov.au/sdmxws/sdmx.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sdmx="http://stats.oecd.org/OECDStatWS/SDMX/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sdmx:GetGenericData>
+         <!--Optional:-->
+         <sdmx:QueryMessage>
+            <message:QueryMessage xsi:schemaLocation="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/query http://www.sdmx.org/docs/2_0/SDMXQuery.xsd http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message http://www.sdmx.org/docs/2_0/SDMXMessage.xsd" xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/query" xmlns:message="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+               <Header xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message">
+                  <ID>none</ID>
+                  <Test>false</Test>
+                  <Truncated>false</Truncated>
+                  <Prepared>2013-06-01T18:27:03</Prepared>
+                  <Sender id="YourID">
+                     <Name xml:lang="en">Your English Name</Name>
+                  </Sender>
+                  <Receiver id="ABS">
+                     <Name xml:lang="en">Australian Bureau of Statistics</Name>
+                     <Name xml:lang="fr">Australian Bureau of Statistics</Name>
+                  </Receiver>
+               </Header>
+               <Query xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message">
+                  <DataWhere xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/query">
+                     <And>
+                        <DataSet>NRP7</DataSet>
+                        <Dimension id="DATAITEM">19</Dimension>
+                        <Dimension id="FREQUENCY">A</Dimension>
+                        <Attribute id="TIME_FORMAT">P1Y</Attribute>
+                        <Time>
+                           <StartTime>2004</StartTime>
+                           <EndTime>2010</EndTime>
+                        </Time>
+                        <Or>
+                           <Dimension id="ASGC_2008">0</Dimension>
+                           <Dimension id="ASGC_2008">1</Dimension>
+                           <Dimension id="ASGC_2008">2</Dimension>
+                           <Dimension id="ASGC_2008">3</Dimension>
+                           <Dimension id="ASGC_2008">4</Dimension>
+                           <Dimension id="ASGC_2008">5</Dimension>
+                           <Dimension id="ASGC_2008">6</Dimension>
+                           <Dimension id="ASGC_2008">7</Dimension>
+                           <Dimension id="ASGC_2008">8</Dimension>
+                           <Dimension id="ASGC_2008">9</Dimension>
+                           <Dimension id="ASGC_2008">10</Dimension>
+                        </Or>
+                     </And>
+                  </DataWhere>
+               </Query>
+            </message:QueryMessage>
+         </sdmx:QueryMessage>
+      </sdmx:GetGenericData>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://stats.oecd.org/OECDStatWS/SDMX/GetGenericData"/><con:wsrmConfig version="1.2"/></con:call><con:call name="NRP7-UnemploymentNumbers-ACT-suburbs"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://stat.abs.gov.au/sdmxws/sdmx.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sdmx="http://stats.oecd.org/OECDStatWS/SDMX/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sdmx:GetGenericData>
+         <!--Optional:-->
+         <sdmx:QueryMessage>
+            <message:QueryMessage xsi:schemaLocation="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/query http://www.sdmx.org/docs/2_0/SDMXQuery.xsd http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message http://www.sdmx.org/docs/2_0/SDMXMessage.xsd" xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/query" xmlns:message="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+               <Header xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message">
+                  <ID>none</ID>
+                  <Test>false</Test>
+                  <Truncated>false</Truncated>
+                  <Prepared>2013-06-01T19:16:52</Prepared>
+                  <Sender id="YourID">
+                     <Name xml:lang="en">Your English Name</Name>
+                  </Sender>
+                  <Receiver id="ABS">
+                     <Name xml:lang="en">Australian Bureau of Statistics</Name>
+                     <Name xml:lang="fr">Australian Bureau of Statistics</Name>
+                  </Receiver>
+               </Header>
+               <Query xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message">
+                  <DataWhere xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/query">
+                     <And>
+                        <DataSet>NRP7</DataSet>
+                        <Dimension id="FREQUENCY">A</Dimension>
+                        <Attribute id="TIME_FORMAT">P1Y</Attribute>
+                        <Time>
+                           <StartTime>2010</StartTime>
+                           <EndTime>2010</EndTime>
+                        </Time>
+                        <Or>
+                           <Dimension id="DATAITEM">19</Dimension>
+                        </Or>
+                        <Or>
+                           <Dimension id="ASGC_2008">805050089</Dimension>
+                           <Dimension id="ASGC_2008">805050189</Dimension>
+                           <Dimension id="ASGC_2008">805050639</Dimension>
+                           <Dimension id="ASGC_2008">805050909</Dimension>
+                           <Dimension id="ASGC_2008">805051449</Dimension>
+                           <Dimension id="ASGC_2008">805051889</Dimension>
+                           <Dimension id="ASGC_2008">805051989</Dimension>
+                           <Dimension id="ASGC_2008">805052169</Dimension>
+                           <Dimension id="ASGC_2008">805053609</Dimension>
+                           <Dimension id="ASGC_2008">805055049</Dimension>
+                           <Dimension id="ASGC_2008">805055229</Dimension>
+                           <Dimension id="ASGC_2008">805055769</Dimension>
+                           <Dimension id="ASGC_2008">805056389</Dimension>
+                           <Dimension id="ASGC_2008">805057209</Dimension>
+                           <Dimension id="ASGC_2008">805057479</Dimension>
+                           <Dimension id="ASGC_2008">805058289</Dimension>
+                           <Dimension id="ASGC_2008">805058559</Dimension>
+                           <Dimension id="ASGC_2008">805100279</Dimension>
+                           <Dimension id="ASGC_2008">805100459</Dimension>
+                           <Dimension id="ASGC_2008">805100549</Dimension>
+                           <Dimension id="ASGC_2008">805100729</Dimension>
+                           <Dimension id="ASGC_2008">805101179</Dimension>
+                           <Dimension id="ASGC_2008">805101629</Dimension>
+                           <Dimension id="ASGC_2008">805102139</Dimension>
+                           <Dimension id="ASGC_2008">805102259</Dimension>
+                           <Dimension id="ASGC_2008">805102619</Dimension>
+                           <Dimension id="ASGC_2008">805102709</Dimension>
+                           <Dimension id="ASGC_2008">805102889</Dimension>
+                           <Dimension id="ASGC_2008">805103249</Dimension>
+                           <Dimension id="ASGC_2008">805103879</Dimension>
+                           <Dimension id="ASGC_2008">805103969</Dimension>
+                           <Dimension id="ASGC_2008">805104149</Dimension>
+                           <Dimension id="ASGC_2008">805104779</Dimension>
+                           <Dimension id="ASGC_2008">805105139</Dimension>
+                           <Dimension id="ASGC_2008">805105409</Dimension>
+                           <Dimension id="ASGC_2008">805105589</Dimension>
+                           <Dimension id="ASGC_2008">805105679</Dimension>
+                           <Dimension id="ASGC_2008">805105949</Dimension>
+                           <Dimension id="ASGC_2008">805106669</Dimension>
+                           <Dimension id="ASGC_2008">805107569</Dimension>
+                           <Dimension id="ASGC_2008">805107659</Dimension>
+                           <Dimension id="ASGC_2008">805108649</Dimension>
+                           <Dimension id="ASGC_2008">805151269</Dimension>
+                           <Dimension id="ASGC_2008">805151719</Dimension>
+                           <Dimension id="ASGC_2008">805152439</Dimension>
+                           <Dimension id="ASGC_2008">805153069</Dimension>
+                           <Dimension id="ASGC_2008">805154239</Dimension>
+                           <Dimension id="ASGC_2008">805154419</Dimension>
+                           <Dimension id="ASGC_2008">805155319</Dimension>
+                           <Dimension id="ASGC_2008">805155859</Dimension>
+                           <Dimension id="ASGC_2008">805156489</Dimension>
+                           <Dimension id="ASGC_2008">805156849</Dimension>
+                           <Dimension id="ASGC_2008">805156939</Dimension>
+                           <Dimension id="ASGC_2008">805158109</Dimension>
+                           <Dimension id="ASGC_2008">805201089</Dimension>
+                           <Dimension id="ASGC_2008">805202079</Dimension>
+                           <Dimension id="ASGC_2008">805202529</Dimension>
+                           <Dimension id="ASGC_2008">805204059</Dimension>
+                           <Dimension id="ASGC_2008">805207389</Dimension>
+                           <Dimension id="ASGC_2008">805207749</Dimension>
+                           <Dimension id="ASGC_2008">805207839</Dimension>
+                           <Dimension id="ASGC_2008">805208469</Dimension>
+                           <Dimension id="ASGC_2008">805208739</Dimension>
+                           <Dimension id="ASGC_2008">805208829</Dimension>
+                           <Dimension id="ASGC_2008">805250339</Dimension>
+                           <Dimension id="ASGC_2008">805250609</Dimension>
+                           <Dimension id="ASGC_2008">805250819</Dimension>
+                           <Dimension id="ASGC_2008">805251359</Dimension>
+                           <Dimension id="ASGC_2008">805251549</Dimension>
+                           <Dimension id="ASGC_2008">805252349</Dimension>
+                           <Dimension id="ASGC_2008">805253159</Dimension>
+                           <Dimension id="ASGC_2008">805253289</Dimension>
+                           <Dimension id="ASGC_2008">805253339</Dimension>
+                           <Dimension id="ASGC_2008">805253379</Dimension>
+                           <Dimension id="ASGC_2008">805254509</Dimension>
+                           <Dimension id="ASGC_2008">805254869</Dimension>
+                           <Dimension id="ASGC_2008">805255489</Dimension>
+                           <Dimension id="ASGC_2008">805256129</Dimension>
+                           <Dimension id="ASGC_2008">805256579</Dimension>
+                           <Dimension id="ASGC_2008">805257289</Dimension>
+                           <Dimension id="ASGC_2008">805258019</Dimension>
+                           <Dimension id="ASGC_2008">805258189</Dimension>
+                           <Dimension id="ASGC_2008">805258379</Dimension>
+                           <Dimension id="ASGC_2008">805350369</Dimension>
+                           <Dimension id="ASGC_2008">805351809</Dimension>
+                           <Dimension id="ASGC_2008">805352789</Dimension>
+                           <Dimension id="ASGC_2008">805352979</Dimension>
+                           <Dimension id="ASGC_2008">805353429</Dimension>
+                           <Dimension id="ASGC_2008">805353789</Dimension>
+                           <Dimension id="ASGC_2008">805354329</Dimension>
+                           <Dimension id="ASGC_2008">805354589</Dimension>
+                           <Dimension id="ASGC_2008">805354959</Dimension>
+                           <Dimension id="ASGC_2008">805356219</Dimension>
+                           <Dimension id="ASGC_2008">805356309</Dimension>
+                           <Dimension id="ASGC_2008">805356759</Dimension>
+                           <Dimension id="ASGC_2008">805357029</Dimension>
+                           <Dimension id="ASGC_2008">805357119</Dimension>
+                           <Dimension id="ASGC_2008">805357929</Dimension>
+                           <Dimension id="ASGC_2008">805358919</Dimension>
+                           <Dimension id="ASGC_2008">805400239</Dimension>
+                           <Dimension id="ASGC_2008">805400589</Dimension>
+                           <Dimension id="ASGC_2008">805400939</Dimension>
+                           <Dimension id="ASGC_2008">805401649</Dimension>
+                           <Dimension id="ASGC_2008">805402779</Dimension>
+                           <Dimension id="ASGC_2008">805402919</Dimension>
+                           <Dimension id="ASGC_2008">805403519</Dimension>
+                           <Dimension id="ASGC_2008">805403529</Dimension>
+                           <Dimension id="ASGC_2008">805403689</Dimension>
+                           <Dimension id="ASGC_2008">805403819</Dimension>
+                           <Dimension id="ASGC_2008">805406039</Dimension>
+                           <Dimension id="ASGC_2008">805406249</Dimension>
+                           <Dimension id="ASGC_2008">805406279</Dimension>
+                           <Dimension id="ASGC_2008">805406719</Dimension>
+                           <Dimension id="ASGC_2008">810059009</Dimension>
+                           <Dimension id="ASGC_2008">899999999</Dimension>
+                           <Dimension id="ASGC_2008">LGA89399</Dimension>
+                           <Dimension id="ASGC_2008">LGA89999</Dimension>
+                        </Or>
+                     </And>
+                  </DataWhere>
+               </Query>
+            </message:QueryMessage>
+         </sdmx:QueryMessage>
+      </sdmx:GetGenericData>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://stats.oecd.org/OECDStatWS/SDMX/GetGenericData"/><con:wsrmConfig version="1.2"/></con:call><con:call name="NRP7-all-ACT-subdivisions"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://stat.abs.gov.au/sdmxws/sdmx.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sdmx="http://stats.oecd.org/OECDStatWS/SDMX/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sdmx:GetGenericData>
+         <!--Optional:-->
+         <sdmx:QueryMessage>
+            <message:QueryMessage xsi:schemaLocation="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/query http://www.sdmx.org/docs/2_0/SDMXQuery.xsd http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message http://www.sdmx.org/docs/2_0/SDMXMessage.xsd" xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/query" xmlns:message="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+               <Header xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message">
+                  <ID>none</ID>
+                  <Test>false</Test>
+                  <Truncated>false</Truncated>
+                  <Prepared>2013-06-01T19:16:52</Prepared>
+                  <Sender id="YourID">
+                     <Name xml:lang="en">Your English Name</Name>
+                  </Sender>
+                  <Receiver id="ABS">
+                     <Name xml:lang="en">Australian Bureau of Statistics</Name>
+                     <Name xml:lang="fr">Australian Bureau of Statistics</Name>
+                  </Receiver>
+               </Header>
+               <Query xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message">
+                  <DataWhere xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/query">
+                     <And>
+                        <DataSet>NRP7</DataSet>
+                        <Dimension id="FREQUENCY">A</Dimension>
+                        <Attribute id="TIME_FORMAT">P1Y</Attribute>
+                        <Time>
+                           <StartTime>2004</StartTime>
+                           <EndTime>2010</EndTime>
+                        </Time>
+                        <Or>
+                           <Dimension id="DATAITEM">19</Dimension>
+                           <Dimension id="DATAITEM">20</Dimension>
+                           <Dimension id="DATAITEM">36</Dimension>
+                           <Dimension id="DATAITEM">38</Dimension>
+                           <Dimension id="DATAITEM">37</Dimension>
+                           <Dimension id="DATAITEM">42</Dimension>
+                           <Dimension id="DATAITEM">44</Dimension>
+                           <Dimension id="DATAITEM">43</Dimension>
+                           <Dimension id="DATAITEM">34</Dimension>
+                           <Dimension id="DATAITEM">33</Dimension>
+                           <Dimension id="DATAITEM">35</Dimension>
+                           <Dimension id="DATAITEM">39</Dimension>
+                           <Dimension id="DATAITEM">41</Dimension>
+                           <Dimension id="DATAITEM">40</Dimension>
+                           <Dimension id="DATAITEM">21</Dimension>
+                           <Dimension id="DATAITEM">22</Dimension>
+                           <Dimension id="DATAITEM">23</Dimension>
+                           <Dimension id="DATAITEM">24</Dimension>
+                           <Dimension id="DATAITEM">27</Dimension>
+                           <Dimension id="DATAITEM">29</Dimension>
+                           <Dimension id="DATAITEM">31</Dimension>
+                           <Dimension id="DATAITEM">28</Dimension>
+                           <Dimension id="DATAITEM">25</Dimension>
+                           <Dimension id="DATAITEM">26</Dimension>
+                           <Dimension id="DATAITEM">30</Dimension>
+                           <Dimension id="DATAITEM">32</Dimension>
+                           <Dimension id="DATAITEM">17</Dimension>
+                           <Dimension id="DATAITEM">18</Dimension>
+                           <Dimension id="DATAITEM">6</Dimension>
+                           <Dimension id="DATAITEM">11</Dimension>
+                           <Dimension id="DATAITEM">12</Dimension>
+                           <Dimension id="DATAITEM">3</Dimension>
+                           <Dimension id="DATAITEM">7</Dimension>
+                           <Dimension id="DATAITEM">8</Dimension>
+                           <Dimension id="DATAITEM">1</Dimension>
+                           <Dimension id="DATAITEM">10</Dimension>
+                           <Dimension id="DATAITEM">9</Dimension>
+                           <Dimension id="DATAITEM">2</Dimension>
+                           <Dimension id="DATAITEM">13</Dimension>
+                           <Dimension id="DATAITEM">14</Dimension>
+                           <Dimension id="DATAITEM">4</Dimension>
+                           <Dimension id="DATAITEM">16</Dimension>
+                           <Dimension id="DATAITEM">15</Dimension>
+                           <Dimension id="DATAITEM">5</Dimension>
+                           <Dimension id="DATAITEM">51</Dimension>
+                           <Dimension id="DATAITEM">52</Dimension>
+                           <Dimension id="DATAITEM">53</Dimension>
+                           <Dimension id="DATAITEM">54</Dimension>
+                           <Dimension id="DATAITEM">55</Dimension>
+                           <Dimension id="DATAITEM">56</Dimension>
+                           <Dimension id="DATAITEM">64</Dimension>
+                           <Dimension id="DATAITEM">45</Dimension>
+                           <Dimension id="DATAITEM">46</Dimension>
+                           <Dimension id="DATAITEM">47</Dimension>
+                           <Dimension id="DATAITEM">48</Dimension>
+                           <Dimension id="DATAITEM">49</Dimension>
+                           <Dimension id="DATAITEM">50</Dimension>
+                           <Dimension id="DATAITEM">63</Dimension>
+                           <Dimension id="DATAITEM">57</Dimension>
+                           <Dimension id="DATAITEM">58</Dimension>
+                           <Dimension id="DATAITEM">59</Dimension>
+                           <Dimension id="DATAITEM">60</Dimension>
+                           <Dimension id="DATAITEM">61</Dimension>
+                           <Dimension id="DATAITEM">62</Dimension>
+                           <Dimension id="DATAITEM">65</Dimension>
+                           <Dimension id="DATAITEM">70</Dimension>
+                           <Dimension id="DATAITEM">72</Dimension>
+                           <Dimension id="DATAITEM">74</Dimension>
+                           <Dimension id="DATAITEM">67</Dimension>
+                           <Dimension id="DATAITEM">66</Dimension>
+                           <Dimension id="DATAITEM">73</Dimension>
+                           <Dimension id="DATAITEM">69</Dimension>
+                           <Dimension id="DATAITEM">68</Dimension>
+                           <Dimension id="DATAITEM">71</Dimension>
+                           <Dimension id="DATAITEM">75</Dimension>
+                           <Dimension id="DATAITEM">233</Dimension>
+                           <Dimension id="DATAITEM">242</Dimension>
+                           <Dimension id="DATAITEM">234</Dimension>
+                           <Dimension id="DATAITEM">235</Dimension>
+                           <Dimension id="DATAITEM">236</Dimension>
+                           <Dimension id="DATAITEM">237</Dimension>
+                           <Dimension id="DATAITEM">238</Dimension>
+                           <Dimension id="DATAITEM">239</Dimension>
+                           <Dimension id="DATAITEM">240</Dimension>
+                           <Dimension id="DATAITEM">241</Dimension>
+                           <Dimension id="DATAITEM">243</Dimension>
+                           <Dimension id="DATAITEM">244</Dimension>
+                           <Dimension id="DATAITEM">245</Dimension>
+                           <Dimension id="DATAITEM">246</Dimension>
+                           <Dimension id="DATAITEM">247</Dimension>
+                           <Dimension id="DATAITEM">248</Dimension>
+                           <Dimension id="DATAITEM">249</Dimension>
+                           <Dimension id="DATAITEM">250</Dimension>
+                           <Dimension id="DATAITEM">270</Dimension>
+                           <Dimension id="DATAITEM">215</Dimension>
+                           <Dimension id="DATAITEM">224</Dimension>
+                           <Dimension id="DATAITEM">216</Dimension>
+                           <Dimension id="DATAITEM">217</Dimension>
+                           <Dimension id="DATAITEM">218</Dimension>
+                           <Dimension id="DATAITEM">219</Dimension>
+                           <Dimension id="DATAITEM">220</Dimension>
+                           <Dimension id="DATAITEM">221</Dimension>
+                           <Dimension id="DATAITEM">222</Dimension>
+                           <Dimension id="DATAITEM">223</Dimension>
+                           <Dimension id="DATAITEM">225</Dimension>
+                           <Dimension id="DATAITEM">226</Dimension>
+                           <Dimension id="DATAITEM">227</Dimension>
+                           <Dimension id="DATAITEM">228</Dimension>
+                           <Dimension id="DATAITEM">229</Dimension>
+                           <Dimension id="DATAITEM">230</Dimension>
+                           <Dimension id="DATAITEM">231</Dimension>
+                           <Dimension id="DATAITEM">232</Dimension>
+                           <Dimension id="DATAITEM">269</Dimension>
+                           <Dimension id="DATAITEM">251</Dimension>
+                           <Dimension id="DATAITEM">260</Dimension>
+                           <Dimension id="DATAITEM">252</Dimension>
+                           <Dimension id="DATAITEM">253</Dimension>
+                           <Dimension id="DATAITEM">254</Dimension>
+                           <Dimension id="DATAITEM">255</Dimension>
+                           <Dimension id="DATAITEM">256</Dimension>
+                           <Dimension id="DATAITEM">257</Dimension>
+                           <Dimension id="DATAITEM">258</Dimension>
+                           <Dimension id="DATAITEM">259</Dimension>
+                           <Dimension id="DATAITEM">261</Dimension>
+                           <Dimension id="DATAITEM">262</Dimension>
+                           <Dimension id="DATAITEM">263</Dimension>
+                           <Dimension id="DATAITEM">264</Dimension>
+                           <Dimension id="DATAITEM">265</Dimension>
+                           <Dimension id="DATAITEM">266</Dimension>
+                           <Dimension id="DATAITEM">267</Dimension>
+                           <Dimension id="DATAITEM">268</Dimension>
+                           <Dimension id="DATAITEM">271</Dimension>
+                           <Dimension id="DATAITEM">300</Dimension>
+                           <Dimension id="DATAITEM">214</Dimension>
+                           <Dimension id="DATAITEM">209</Dimension>
+                           <Dimension id="DATAITEM">208</Dimension>
+                           <Dimension id="DATAITEM">212</Dimension>
+                           <Dimension id="DATAITEM">206</Dimension>
+                           <Dimension id="DATAITEM">210</Dimension>
+                           <Dimension id="DATAITEM">207</Dimension>
+                           <Dimension id="DATAITEM">211</Dimension>
+                           <Dimension id="DATAITEM">205</Dimension>
+                           <Dimension id="DATAITEM">213</Dimension>
+                           <Dimension id="DATAITEM">318</Dimension>
+                           <Dimension id="DATAITEM">317</Dimension>
+                           <Dimension id="DATAITEM">315</Dimension>
+                           <Dimension id="DATAITEM">313</Dimension>
+                           <Dimension id="DATAITEM">311</Dimension>
+                           <Dimension id="DATAITEM">310</Dimension>
+                           <Dimension id="DATAITEM">312</Dimension>
+                           <Dimension id="DATAITEM">314</Dimension>
+                           <Dimension id="DATAITEM">316</Dimension>
+                           <Dimension id="DATAITEM">296</Dimension>
+                           <Dimension id="DATAITEM">297</Dimension>
+                           <Dimension id="DATAITEM">299</Dimension>
+                           <Dimension id="DATAITEM">292</Dimension>
+                           <Dimension id="DATAITEM">291</Dimension>
+                           <Dimension id="DATAITEM">298</Dimension>
+                           <Dimension id="DATAITEM">295</Dimension>
+                           <Dimension id="DATAITEM">294</Dimension>
+                           <Dimension id="DATAITEM">293</Dimension>
+                           <Dimension id="DATAITEM">285</Dimension>
+                           <Dimension id="DATAITEM">284</Dimension>
+                           <Dimension id="DATAITEM">283</Dimension>
+                           <Dimension id="DATAITEM">286</Dimension>
+                           <Dimension id="DATAITEM">272</Dimension>
+                           <Dimension id="DATAITEM">273</Dimension>
+                           <Dimension id="DATAITEM">274</Dimension>
+                           <Dimension id="DATAITEM">275</Dimension>
+                           <Dimension id="DATAITEM">276</Dimension>
+                           <Dimension id="DATAITEM">277</Dimension>
+                           <Dimension id="DATAITEM">278</Dimension>
+                           <Dimension id="DATAITEM">289</Dimension>
+                           <Dimension id="DATAITEM">287</Dimension>
+                           <Dimension id="DATAITEM">290</Dimension>
+                           <Dimension id="DATAITEM">288</Dimension>
+                           <Dimension id="DATAITEM">302</Dimension>
+                           <Dimension id="DATAITEM">301</Dimension>
+                           <Dimension id="DATAITEM">303</Dimension>
+                           <Dimension id="DATAITEM">304</Dimension>
+                           <Dimension id="DATAITEM">305</Dimension>
+                           <Dimension id="DATAITEM">307</Dimension>
+                           <Dimension id="DATAITEM">308</Dimension>
+                           <Dimension id="DATAITEM">306</Dimension>
+                           <Dimension id="DATAITEM">309</Dimension>
+                           <Dimension id="DATAITEM">323</Dimension>
+                           <Dimension id="DATAITEM">321</Dimension>
+                           <Dimension id="DATAITEM">319</Dimension>
+                           <Dimension id="DATAITEM">320</Dimension>
+                           <Dimension id="DATAITEM">322</Dimension>
+                           <Dimension id="DATAITEM">279</Dimension>
+                           <Dimension id="DATAITEM">280</Dimension>
+                           <Dimension id="DATAITEM">281</Dimension>
+                           <Dimension id="DATAITEM">282</Dimension>
+                           <Dimension id="DATAITEM">200</Dimension>
+                           <Dimension id="DATAITEM">204</Dimension>
+                           <Dimension id="DATAITEM">201</Dimension>
+                           <Dimension id="DATAITEM">203</Dimension>
+                           <Dimension id="DATAITEM">413</Dimension>
+                           <Dimension id="DATAITEM">414</Dimension>
+                           <Dimension id="DATAITEM">516</Dimension>
+                           <Dimension id="DATAITEM">515</Dimension>
+                           <Dimension id="DATAITEM">519</Dimension>
+                           <Dimension id="DATAITEM">518</Dimension>
+                           <Dimension id="DATAITEM">517</Dimension>
+                           <Dimension id="DATAITEM">512</Dimension>
+                           <Dimension id="DATAITEM">336</Dimension>
+                           <Dimension id="DATAITEM">329</Dimension>
+                           <Dimension id="DATAITEM">332</Dimension>
+                           <Dimension id="DATAITEM">333</Dimension>
+                           <Dimension id="DATAITEM">330</Dimension>
+                           <Dimension id="DATAITEM">327</Dimension>
+                           <Dimension id="DATAITEM">335</Dimension>
+                           <Dimension id="DATAITEM">328</Dimension>
+                           <Dimension id="DATAITEM">334</Dimension>
+                           <Dimension id="DATAITEM">337</Dimension>
+                           <Dimension id="DATAITEM">449</Dimension>
+                           <Dimension id="DATAITEM">443</Dimension>
+                           <Dimension id="DATAITEM">445</Dimension>
+                           <Dimension id="DATAITEM">446</Dimension>
+                           <Dimension id="DATAITEM">444</Dimension>
+                           <Dimension id="DATAITEM">441</Dimension>
+                           <Dimension id="DATAITEM">448</Dimension>
+                           <Dimension id="DATAITEM">442</Dimension>
+                           <Dimension id="DATAITEM">447</Dimension>
+                           <Dimension id="DATAITEM">450</Dimension>
+                           <Dimension id="DATAITEM">331</Dimension>
+                           <Dimension id="DATAITEM">326</Dimension>
+                           <Dimension id="DATAITEM">325</Dimension>
+                           <Dimension id="DATAITEM">340</Dimension>
+                           <Dimension id="DATAITEM">338</Dimension>
+                           <Dimension id="DATAITEM">339</Dimension>
+                           <Dimension id="DATAITEM">355</Dimension>
+                           <Dimension id="DATAITEM">354</Dimension>
+                           <Dimension id="DATAITEM">356</Dimension>
+                           <Dimension id="DATAITEM">353</Dimension>
+                           <Dimension id="DATAITEM">357</Dimension>
+                           <Dimension id="DATAITEM">358</Dimension>
+                           <Dimension id="DATAITEM">351</Dimension>
+                           <Dimension id="DATAITEM">352</Dimension>
+                           <Dimension id="DATAITEM">359</Dimension>
+                           <Dimension id="DATAITEM">502</Dimension>
+                           <Dimension id="DATAITEM">503</Dimension>
+                           <Dimension id="DATAITEM">506</Dimension>
+                           <Dimension id="DATAITEM">505</Dimension>
+                           <Dimension id="DATAITEM">501</Dimension>
+                           <Dimension id="DATAITEM">504</Dimension>
+                           <Dimension id="DATAITEM">510</Dimension>
+                           <Dimension id="DATAITEM">508</Dimension>
+                           <Dimension id="DATAITEM">507</Dimension>
+                           <Dimension id="DATAITEM">509</Dimension>
+                           <Dimension id="DATAITEM">521</Dimension>
+                           <Dimension id="DATAITEM">523</Dimension>
+                           <Dimension id="DATAITEM">522</Dimension>
+                           <Dimension id="DATAITEM">520</Dimension>
+                           <Dimension id="DATAITEM">324</Dimension>
+                           <Dimension id="DATAITEM">361</Dimension>
+                           <Dimension id="DATAITEM">360</Dimension>
+                           <Dimension id="DATAITEM">362</Dimension>
+                           <Dimension id="DATAITEM">363</Dimension>
+                           <Dimension id="DATAITEM">364</Dimension>
+                           <Dimension id="DATAITEM">511</Dimension>
+                        </Or>
+                        <Or>
+                           <Dimension id="ASGC_2008">8</Dimension>
+                           <Dimension id="ASGC_2008">805</Dimension>
+                           <Dimension id="ASGC_2008">80505</Dimension>
+                           <Dimension id="ASGC_2008">805050089</Dimension>
+                           <Dimension id="ASGC_2008">805050189</Dimension>
+                           <Dimension id="ASGC_2008">805050639</Dimension>
+                           <Dimension id="ASGC_2008">805050909</Dimension>
+                           <Dimension id="ASGC_2008">805051449</Dimension>
+                           <Dimension id="ASGC_2008">805051889</Dimension>
+                           <Dimension id="ASGC_2008">805051989</Dimension>
+                           <Dimension id="ASGC_2008">805052169</Dimension>
+                           <Dimension id="ASGC_2008">805053609</Dimension>
+                           <Dimension id="ASGC_2008">805055049</Dimension>
+                           <Dimension id="ASGC_2008">805055229</Dimension>
+                           <Dimension id="ASGC_2008">805055769</Dimension>
+                           <Dimension id="ASGC_2008">805056389</Dimension>
+                           <Dimension id="ASGC_2008">805057209</Dimension>
+                           <Dimension id="ASGC_2008">805057479</Dimension>
+                           <Dimension id="ASGC_2008">805058289</Dimension>
+                           <Dimension id="ASGC_2008">805058559</Dimension>
+                           <Dimension id="ASGC_2008">80510</Dimension>
+                           <Dimension id="ASGC_2008">805100279</Dimension>
+                           <Dimension id="ASGC_2008">805100459</Dimension>
+                           <Dimension id="ASGC_2008">805100549</Dimension>
+                           <Dimension id="ASGC_2008">805100729</Dimension>
+                           <Dimension id="ASGC_2008">805101179</Dimension>
+                           <Dimension id="ASGC_2008">805101629</Dimension>
+                           <Dimension id="ASGC_2008">805102139</Dimension>
+                           <Dimension id="ASGC_2008">805102259</Dimension>
+                           <Dimension id="ASGC_2008">805102619</Dimension>
+                           <Dimension id="ASGC_2008">805102709</Dimension>
+                           <Dimension id="ASGC_2008">805102889</Dimension>
+                           <Dimension id="ASGC_2008">805103249</Dimension>
+                           <Dimension id="ASGC_2008">805103879</Dimension>
+                           <Dimension id="ASGC_2008">805103969</Dimension>
+                           <Dimension id="ASGC_2008">805104149</Dimension>
+                           <Dimension id="ASGC_2008">805104779</Dimension>
+                           <Dimension id="ASGC_2008">805105139</Dimension>
+                           <Dimension id="ASGC_2008">805105409</Dimension>
+                           <Dimension id="ASGC_2008">805105589</Dimension>
+                           <Dimension id="ASGC_2008">805105679</Dimension>
+                           <Dimension id="ASGC_2008">805105949</Dimension>
+                           <Dimension id="ASGC_2008">805106669</Dimension>
+                           <Dimension id="ASGC_2008">805107569</Dimension>
+                           <Dimension id="ASGC_2008">805107659</Dimension>
+                           <Dimension id="ASGC_2008">805108649</Dimension>
+                           <Dimension id="ASGC_2008">80515</Dimension>
+                           <Dimension id="ASGC_2008">805151269</Dimension>
+                           <Dimension id="ASGC_2008">805151719</Dimension>
+                           <Dimension id="ASGC_2008">805152439</Dimension>
+                           <Dimension id="ASGC_2008">805153069</Dimension>
+                           <Dimension id="ASGC_2008">805154239</Dimension>
+                           <Dimension id="ASGC_2008">805154419</Dimension>
+                           <Dimension id="ASGC_2008">805155319</Dimension>
+                           <Dimension id="ASGC_2008">805155859</Dimension>
+                           <Dimension id="ASGC_2008">805156489</Dimension>
+                           <Dimension id="ASGC_2008">805156849</Dimension>
+                           <Dimension id="ASGC_2008">805156939</Dimension>
+                           <Dimension id="ASGC_2008">805158109</Dimension>
+                           <Dimension id="ASGC_2008">80520</Dimension>
+                           <Dimension id="ASGC_2008">805201089</Dimension>
+                           <Dimension id="ASGC_2008">805202079</Dimension>
+                           <Dimension id="ASGC_2008">805202529</Dimension>
+                           <Dimension id="ASGC_2008">805204059</Dimension>
+                           <Dimension id="ASGC_2008">805207389</Dimension>
+                           <Dimension id="ASGC_2008">805207749</Dimension>
+                           <Dimension id="ASGC_2008">805207839</Dimension>
+                           <Dimension id="ASGC_2008">805208469</Dimension>
+                           <Dimension id="ASGC_2008">805208739</Dimension>
+                           <Dimension id="ASGC_2008">805208829</Dimension>
+                           <Dimension id="ASGC_2008">80525</Dimension>
+                           <Dimension id="ASGC_2008">805250339</Dimension>
+                           <Dimension id="ASGC_2008">805250609</Dimension>
+                           <Dimension id="ASGC_2008">805250819</Dimension>
+                           <Dimension id="ASGC_2008">805251359</Dimension>
+                           <Dimension id="ASGC_2008">805251549</Dimension>
+                           <Dimension id="ASGC_2008">805252349</Dimension>
+                           <Dimension id="ASGC_2008">805253159</Dimension>
+                           <Dimension id="ASGC_2008">805253289</Dimension>
+                           <Dimension id="ASGC_2008">805253339</Dimension>
+                           <Dimension id="ASGC_2008">805253379</Dimension>
+                           <Dimension id="ASGC_2008">805254509</Dimension>
+                           <Dimension id="ASGC_2008">805254869</Dimension>
+                           <Dimension id="ASGC_2008">805255489</Dimension>
+                           <Dimension id="ASGC_2008">805256129</Dimension>
+                           <Dimension id="ASGC_2008">805256579</Dimension>
+                           <Dimension id="ASGC_2008">805257289</Dimension>
+                           <Dimension id="ASGC_2008">805258019</Dimension>
+                           <Dimension id="ASGC_2008">805258189</Dimension>
+                           <Dimension id="ASGC_2008">805258379</Dimension>
+                           <Dimension id="ASGC_2008">80535</Dimension>
+                           <Dimension id="ASGC_2008">805350369</Dimension>
+                           <Dimension id="ASGC_2008">805351809</Dimension>
+                           <Dimension id="ASGC_2008">805352789</Dimension>
+                           <Dimension id="ASGC_2008">805352979</Dimension>
+                           <Dimension id="ASGC_2008">805353429</Dimension>
+                           <Dimension id="ASGC_2008">805353789</Dimension>
+                           <Dimension id="ASGC_2008">805354329</Dimension>
+                           <Dimension id="ASGC_2008">805354589</Dimension>
+                           <Dimension id="ASGC_2008">805354959</Dimension>
+                           <Dimension id="ASGC_2008">805356219</Dimension>
+                           <Dimension id="ASGC_2008">805356309</Dimension>
+                           <Dimension id="ASGC_2008">805356759</Dimension>
+                           <Dimension id="ASGC_2008">805357029</Dimension>
+                           <Dimension id="ASGC_2008">805357119</Dimension>
+                           <Dimension id="ASGC_2008">805357929</Dimension>
+                           <Dimension id="ASGC_2008">805358919</Dimension>
+                           <Dimension id="ASGC_2008">80540</Dimension>
+                           <Dimension id="ASGC_2008">805400239</Dimension>
+                           <Dimension id="ASGC_2008">805400589</Dimension>
+                           <Dimension id="ASGC_2008">805400939</Dimension>
+                           <Dimension id="ASGC_2008">805401649</Dimension>
+                           <Dimension id="ASGC_2008">805402779</Dimension>
+                           <Dimension id="ASGC_2008">805402919</Dimension>
+                           <Dimension id="ASGC_2008">805403519</Dimension>
+                           <Dimension id="ASGC_2008">805403529</Dimension>
+                           <Dimension id="ASGC_2008">805403689</Dimension>
+                           <Dimension id="ASGC_2008">805403819</Dimension>
+                           <Dimension id="ASGC_2008">805406039</Dimension>
+                           <Dimension id="ASGC_2008">805406249</Dimension>
+                           <Dimension id="ASGC_2008">805406279</Dimension>
+                           <Dimension id="ASGC_2008">805406719</Dimension>
+                           <Dimension id="ASGC_2008">810</Dimension>
+                           <Dimension id="ASGC_2008">81005</Dimension>
+                           <Dimension id="ASGC_2008">810059009</Dimension>
+                           <Dimension id="ASGC_2008">899</Dimension>
+                           <Dimension id="ASGC_2008">89999</Dimension>
+                           <Dimension id="ASGC_2008">899999999</Dimension>
+                           <Dimension id="ASGC_2008">LGA89399</Dimension>
+                           <Dimension id="ASGC_2008">LGA89999</Dimension>
+                        </Or>
+                     </And>
+                  </DataWhere>
+               </Query>
+            </message:QueryMessage>
+         </sdmx:QueryMessage>
+      </sdmx:GetGenericData>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://stats.oecd.org/OECDStatWS/SDMX/GetGenericData"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation isOneWay="false" action="http://stats.oecd.org/OECDStatWS/SDMX/GetMetadata" name="GetMetadata" bindingOperationName="GetMetadata" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://stat.abs.gov.au/sdmxws/sdmx.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sdmx="http://stats.oecd.org/OECDStatWS/SDMX/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sdmx:GetMetadata>
+         <!--Optional:-->
+         <sdmx:QueryMessage>
+            <!--You may enter ANY elements at this point-->
+         </sdmx:QueryMessage>
+      </sdmx:GetMetadata>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://stats.oecd.org/OECDStatWS/SDMX/GetMetadata"/></con:call></con:operation><con:operation isOneWay="false" action="http://stats.oecd.org/OECDStatWS/SDMX/GetMetadataStructure" name="GetMetadataStructure" bindingOperationName="GetMetadataStructure" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://stat.abs.gov.au/sdmxws/sdmx.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sdmx="http://stats.oecd.org/OECDStatWS/SDMX/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sdmx:GetMetadataStructure>
+         <!--Optional:-->
+         <sdmx:XmlQuery>
+            <!--You may enter ANY elements at this point-->
+         </sdmx:XmlQuery>
+      </sdmx:GetMetadataStructure>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://stats.oecd.org/OECDStatWS/SDMX/GetMetadataStructure"/></con:call></con:operation><con:operation isOneWay="false" action="http://stats.oecd.org/OECDStatWS/SDMX/GetReferenceMetadata" name="GetReferenceMetadata" bindingOperationName="GetReferenceMetadata" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://stat.abs.gov.au/sdmxws/sdmx.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sdmx="http://stats.oecd.org/OECDStatWS/SDMX/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sdmx:GetReferenceMetadata>
+         <!--Optional:-->
+         <sdmx:XmlQuery>
+            <!--You may enter ANY elements at this point-->
+         </sdmx:XmlQuery>
+      </sdmx:GetReferenceMetadata>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://stats.oecd.org/OECDStatWS/SDMX/GetReferenceMetadata"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="ABS.Stat_x0020_SDMX_x0020_web_x0020_serviceSoap12" type="wsdl" bindingName="{http://stats.oecd.org/OECDStatWS/SDMX/}ABS.Stat_x0020_SDMX_x0020_web_x0020_serviceSoap12" soapVersion="1_2" anonymous="optional" definition="http://stat.abs.gov.au/sdmxws/sdmx.asmx?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://stat.abs.gov.au/sdmxws/sdmx.asmx?wsdl"><con:part><con:url>http://stat.abs.gov.au/sdmxws/sdmx.asmx?wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://stats.oecd.org/OECDStatWS/SDMX/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://stats.oecd.org/OECDStatWS/SDMX/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation><![CDATA[This service gives access to .Stat data and tries to be fully SDMX 2.0 compliant. However, the following additional rules are applied:<br><br><b>(1)</b> .Stat provides currently only annual, bi-annual, quarterly, monthly and non-time-series data.<br>Independently from the presence of a FREQUENCY dimension, the requested time frequency should be specified using the TIME_FORMAT attribute as in this example:<br><br>&lt;And&gt;<br>&nbsp;&nbsp;<b>&lt;Attribute name="TIME_FORMAT"&gt;P1M&lt;/Attribute&gt;</b><br>&nbsp;&nbsp;&lt;Time&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;StartTime&gt;1960-01&lt;/StartTime&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;EndTime&gt;2005-10&lt;/EndTime&gt;<br>&nbsp;&nbsp;&lt;/Time&gt;<br>&lt;/And&gt;<br><br>The TIME_FORMAT attribute should have the following value: 'P1Y' for annual, 'P6M' for bi-annual, 'P3M' for quarterly and 'P1M' for monthly data. This attribute is then also present in the resulting generic data message at the Series level of time-series data.<br>For non-time-series data, the TIME_PERIOD attribute and the 'Time' node should be omitted in the query message. In this case, the response messages use '9999' for the obligatory time periods.<br><br><b>(2)</b> In the .Stat data warehouse each dataset (multidimensional cube) has its own Data Structure Definition.<br><br><b>(3)</b> Structure your query by defining separate data 'cubes'. Each data cube must have a 'DataSet' node. This 'DataSet' node must be a direct child of one separate 'And' clause which must include all necessary dimension codes at any lower (child) level, and which itself must be a direct child of either of the clauses 'DataWhere' or 'Or'.<br><br><b>(4)</b> For simplification reasons in this web service, the returned message headers only contain required information. As the 'message:ID' field is not (yet) used, its content is filled with a placeholder to conform to the standard.<br><br><b>(5)</b> Our new SDMX web service version implements Streaming, and can therefore not set the 'Truncated' element in the response message. We are thus unable to take the 'defaultLimit' attribute in the Query message into account. To avoid errors, either implement streaming also at your (client) side to allow for greater-sized results or restrict the selection in the query message according to your limitation. In any case, please don't use the 'defaultLimit' attribute in the Query message.<br><br>]]]]>><![CDATA[</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://stats.oecd.org/OECDStatWS/SDMX/">
+      <s:element name="GetDataStructureDefinition">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryMessage">
+              <s:complexType>
+                <s:sequence>
+                  <s:any/>
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataStructureDefinitionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDataStructureDefinitionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any/>
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGenericData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryMessage">
+              <s:complexType>
+                <s:sequence>
+                  <s:any/>
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGenericDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGenericDataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any processContents="lax"/>
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCompactData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryMessage">
+              <s:complexType>
+                <s:sequence>
+                  <s:any/>
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCompactDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCompactDataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any processContents="lax"/>
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMetadata">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryMessage">
+              <s:complexType>
+                <s:sequence>
+                  <s:any/>
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMetadataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMetadataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any/>
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDatasetMetadata">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryMessage">
+              <s:complexType>
+                <s:sequence>
+                  <s:any/>
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDatasetMetadataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDatasetMetadataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any/>
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDimensionMetadata">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryMessage">
+              <s:complexType>
+                <s:sequence>
+                  <s:any/>
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDimensionMetadataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDimensionMetadataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any/>
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDimensionMemberMetadata">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryMessage">
+              <s:complexType>
+                <s:sequence>
+                  <s:any/>
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDimensionMemberMetadataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDimensionMemberMetadataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any/>
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMetadataStructure">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="XmlQuery">
+              <s:complexType>
+                <s:sequence>
+                  <s:any/>
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMetadataStructureResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMetadataStructureResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any/>
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReferenceMetadata">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="XmlQuery">
+              <s:complexType>
+                <s:sequence>
+                  <s:any/>
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReferenceMetadataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetReferenceMetadataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any/>
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetDataStructureDefinitionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDataStructureDefinition"/>
+  </wsdl:message>
+  <wsdl:message name="GetDataStructureDefinitionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDataStructureDefinitionResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetGenericDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGenericData"/>
+  </wsdl:message>
+  <wsdl:message name="GetGenericDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGenericDataResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetCompactDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCompactData"/>
+  </wsdl:message>
+  <wsdl:message name="GetCompactDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCompactDataResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetMetadataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMetadata"/>
+  </wsdl:message>
+  <wsdl:message name="GetMetadataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMetadataResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetDatasetMetadataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDatasetMetadata"/>
+  </wsdl:message>
+  <wsdl:message name="GetDatasetMetadataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDatasetMetadataResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetDimensionMetadataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDimensionMetadata"/>
+  </wsdl:message>
+  <wsdl:message name="GetDimensionMetadataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDimensionMetadataResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetDimensionMemberMetadataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDimensionMemberMetadata"/>
+  </wsdl:message>
+  <wsdl:message name="GetDimensionMemberMetadataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDimensionMemberMetadataResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetMetadataStructureSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMetadataStructure"/>
+  </wsdl:message>
+  <wsdl:message name="GetMetadataStructureSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMetadataStructureResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetReferenceMetadataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetReferenceMetadata"/>
+  </wsdl:message>
+  <wsdl:message name="GetReferenceMetadataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetReferenceMetadataResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="ABS.Stat_x0020_SDMX_x0020_web_x0020_serviceSoap">
+    <wsdl:operation name="GetDataStructureDefinition">
+      <wsdl:documentation>Use this method to retrieve the Data Structure Definitions (as well as Code lists and Concepts) from an .Stat dataset. &lt;br>Note: As the requested input parameter is an xml document, you can not try the method using this webservice presentation page. &lt;br>&lt;br>Input: SDMX QueryMessage (in SDMX-ML format)&lt;br>Output: SDMX StructureMessage (in SDMX-ML format)</wsdl:documentation>
+      <wsdl:input message="tns:GetDataStructureDefinitionSoapIn"/>
+      <wsdl:output message="tns:GetDataStructureDefinitionSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetGenericData">
+      <wsdl:documentation>Use this method to retrieve data in Generic format from an .Stat dataset. &lt;br>Note: As the requested input parameter is an xml document, you can not try the method using this webservice presentation page. &lt;br>&lt;br>Input: SDMX QueryMessage (in SDMX-ML format)&lt;br>Output: SDMX GenericDataMessage (in SDMX-ML format)Our new SDMX web service version implements Streaming, and can therefore not set the 'Truncated' element in the response message. We are thus unable to take the 'defaultLimit' attribute in the Query message into account. To avoid errors, either implement streaming also at your (client) side to allow for greater-sized results or restrict the selection in the query message according to your limitation. In any case, please don't use the 'defaultLimit' attribute in the Query message.</wsdl:documentation>
+      <wsdl:input message="tns:GetGenericDataSoapIn"/>
+      <wsdl:output message="tns:GetGenericDataSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompactData">
+      <wsdl:input message="tns:GetCompactDataSoapIn"/>
+      <wsdl:output message="tns:GetCompactDataSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetMetadata">
+      <wsdl:documentation><![CDATA[Use this method to retrieve a range of metadata in a dataset.<br><br>- <a href="Documentation/QueryCoordinatesMD.xml">Sample input</a><br>- <a href="Documentation/CoordinatesMetadata.xml">Sample output</a><br>- <a href="Documentation/GetMetadata.txt">Usage example (C# code)</a><br/><br/><hr/>]]]]>><![CDATA[</wsdl:documentation>
+      <wsdl:input message="tns:GetMetadataSoapIn"/>
+      <wsdl:output message="tns:GetMetadataSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatasetMetadata">
+      <wsdl:documentation><![CDATA[Use this method to retrieve the metadata associated with a dataset.<br><br>- <a href="Documentation/QueryDatasetMD.xml">Sample input</a><br>- <a href="Documentation/DatasetMetadata.xml">Sample output</a><br>- <a href="Documentation/GetDatasetMetadata.txt">Usage example (C# code)</a><br/><br/><hr/>]]]]>><![CDATA[</wsdl:documentation>
+      <wsdl:input message="tns:GetDatasetMetadataSoapIn"/>
+      <wsdl:output message="tns:GetDatasetMetadataSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetDimensionMetadata">
+      <wsdl:documentation><![CDATA[Use this method to retrieve the metadata associated with a dimension in a dataset.<br><br>- <a href="Documentation/QueryDimensionMD.xml">Sample input</a><br>- <a href="Documentation/DimensionMetadata.xml">Sample output</a><br>- <a href="Documentation/GetDimensionMetadata.txt">Usage example (C# code)</a><br/><br/><hr/>]]]]>><![CDATA[</wsdl:documentation>
+      <wsdl:input message="tns:GetDimensionMetadataSoapIn"/>
+      <wsdl:output message="tns:GetDimensionMetadataSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetDimensionMemberMetadata">
+      <wsdl:documentation><![CDATA[Use this method to retrieve the metadata associated with a member of a dimension in a dataset.<br><br>- <a href="Documentation/QueryDimensionMemberMD.xml">Sample input</a><br>- <a href="Documentation/DimensionMemberMetadata.xml">Sample output</a><br>- <a href="Documentation/GetDimensionMemberMetadata.txt">Usage example (C# code)</a><br/><br/><hr/>]]]]>><![CDATA[</wsdl:documentation>
+      <wsdl:input message="tns:GetDimensionMemberMetadataSoapIn"/>
+      <wsdl:output message="tns:GetDimensionMemberMetadataSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetMetadataStructure">
+      <wsdl:documentation><![CDATA[Use this method to retrieve all strucural informations about a given dataset.<br><br>- <a href="Documentation/QueryMSD.xml">Sample input</a><br>- <a href="Documentation/MSD.xml">Sample output</a><br>- <a href="Documentation/GetDatasetStructure.txt">Usage example (C# code)</a><br/><br/><hr/>]]]]>><![CDATA[</wsdl:documentation>
+      <wsdl:input message="tns:GetMetadataStructureSoapIn"/>
+      <wsdl:output message="tns:GetMetadataStructureSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetReferenceMetadata">
+      <wsdl:input message="tns:GetReferenceMetadataSoapIn"/>
+      <wsdl:output message="tns:GetReferenceMetadataSoapOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ABS.Stat_x0020_SDMX_x0020_web_x0020_serviceSoap" type="tns:ABS.Stat_x0020_SDMX_x0020_web_x0020_serviceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetDataStructureDefinition">
+      <soap:operation soapAction="http://stats.oecd.org/OECDStatWS/SDMX/GetDataStructureDefinition" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGenericData">
+      <soap:operation soapAction="http://stats.oecd.org/OECDStatWS/SDMX/GetGenericData" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompactData">
+      <soap:operation soapAction="http://stats.oecd.org/OECDStatWS/SDMX/GetCompactData" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMetadata">
+      <soap:operation soapAction="http://stats.oecd.org/OECDStatWS/SDMX/GetMetadata" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatasetMetadata">
+      <soap:operation soapAction="http://stats.oecd.org/OECDStatWS/SDMX/GetDatasetMetadata" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDimensionMetadata">
+      <soap:operation soapAction="http://stats.oecd.org/OECDStatWS/SDMX/GetDimensionMetadata" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDimensionMemberMetadata">
+      <soap:operation soapAction="http://stats.oecd.org/OECDStatWS/SDMX/GetDimensionMemberMetadata" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMetadataStructure">
+      <soap:operation soapAction="http://stats.oecd.org/OECDStatWS/SDMX/GetMetadataStructure" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReferenceMetadata">
+      <soap:operation soapAction="http://stats.oecd.org/OECDStatWS/SDMX/GetReferenceMetadata" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ABS.Stat_x0020_SDMX_x0020_web_x0020_serviceSoap12" type="tns:ABS.Stat_x0020_SDMX_x0020_web_x0020_serviceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetDataStructureDefinition">
+      <soap12:operation soapAction="http://stats.oecd.org/OECDStatWS/SDMX/GetDataStructureDefinition" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGenericData">
+      <soap12:operation soapAction="http://stats.oecd.org/OECDStatWS/SDMX/GetGenericData" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompactData">
+      <soap12:operation soapAction="http://stats.oecd.org/OECDStatWS/SDMX/GetCompactData" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMetadata">
+      <soap12:operation soapAction="http://stats.oecd.org/OECDStatWS/SDMX/GetMetadata" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatasetMetadata">
+      <soap12:operation soapAction="http://stats.oecd.org/OECDStatWS/SDMX/GetDatasetMetadata" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDimensionMetadata">
+      <soap12:operation soapAction="http://stats.oecd.org/OECDStatWS/SDMX/GetDimensionMetadata" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDimensionMemberMetadata">
+      <soap12:operation soapAction="http://stats.oecd.org/OECDStatWS/SDMX/GetDimensionMemberMetadata" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMetadataStructure">
+      <soap12:operation soapAction="http://stats.oecd.org/OECDStatWS/SDMX/GetMetadataStructure" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReferenceMetadata">
+      <soap12:operation soapAction="http://stats.oecd.org/OECDStatWS/SDMX/GetReferenceMetadata" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ABS.Stat_x0020_SDMX_x0020_web_x0020_service">
+    <wsdl:documentation><![CDATA[This service gives access to .Stat data and tries to be fully SDMX 2.0 compliant. However, the following additional rules are applied:<br><br><b>(1)</b> .Stat provides currently only annual, bi-annual, quarterly, monthly and non-time-series data.<br>Independently from the presence of a FREQUENCY dimension, the requested time frequency should be specified using the TIME_FORMAT attribute as in this example:<br><br>&lt;And&gt;<br>&nbsp;&nbsp;<b>&lt;Attribute name="TIME_FORMAT"&gt;P1M&lt;/Attribute&gt;</b><br>&nbsp;&nbsp;&lt;Time&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;StartTime&gt;1960-01&lt;/StartTime&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;EndTime&gt;2005-10&lt;/EndTime&gt;<br>&nbsp;&nbsp;&lt;/Time&gt;<br>&lt;/And&gt;<br><br>The TIME_FORMAT attribute should have the following value: 'P1Y' for annual, 'P6M' for bi-annual, 'P3M' for quarterly and 'P1M' for monthly data. This attribute is then also present in the resulting generic data message at the Series level of time-series data.<br>For non-time-series data, the TIME_PERIOD attribute and the 'Time' node should be omitted in the query message. In this case, the response messages use '9999' for the obligatory time periods.<br><br><b>(2)</b> In the .Stat data warehouse each dataset (multidimensional cube) has its own Data Structure Definition.<br><br><b>(3)</b> Structure your query by defining separate data 'cubes'. Each data cube must have a 'DataSet' node. This 'DataSet' node must be a direct child of one separate 'And' clause which must include all necessary dimension codes at any lower (child) level, and which itself must be a direct child of either of the clauses 'DataWhere' or 'Or'.<br><br><b>(4)</b> For simplification reasons in this web service, the returned message headers only contain required information. As the 'message:ID' field is not (yet) used, its content is filled with a placeholder to conform to the standard.<br><br><b>(5)</b> Our new SDMX web service version implements Streaming, and can therefore not set the 'Truncated' element in the response message. We are thus unable to take the 'defaultLimit' attribute in the Query message into account. To avoid errors, either implement streaming also at your (client) side to allow for greater-sized results or restrict the selection in the query message according to your limitation. In any case, please don't use the 'defaultLimit' attribute in the Query message.<br><br>]]]]>><![CDATA[</wsdl:documentation>
+    <wsdl:port name="ABS.Stat_x0020_SDMX_x0020_web_x0020_serviceSoap" binding="tns:ABS.Stat_x0020_SDMX_x0020_web_x0020_serviceSoap">
+      <soap:address location="http://stat.abs.gov.au/sdmxws/sdmx.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="ABS.Stat_x0020_SDMX_x0020_web_x0020_serviceSoap12" binding="tns:ABS.Stat_x0020_SDMX_x0020_web_x0020_serviceSoap12">
+      <soap12:address location="http://stat.abs.gov.au/sdmxws/sdmx.asmx"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://stat.abs.gov.au/sdmxws/sdmx.asmx</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://stats.oecd.org/OECDStatWS/SDMX/GetCompactData" name="GetCompactData" bindingOperationName="GetCompactData" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://stat.abs.gov.au/sdmxws/sdmx.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:sdmx="http://stats.oecd.org/OECDStatWS/SDMX/">
+   <soap:Header/>
+   <soap:Body>
+      <sdmx:GetCompactData>
+         <!--Optional:-->
+         <sdmx:QueryMessage>
+            <!--You may enter ANY elements at this point-->
+         </sdmx:QueryMessage>
+      </sdmx:GetCompactData>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://stats.oecd.org/OECDStatWS/SDMX/ABS.Stat_x0020_SDMX_x0020_web_x0020_serviceSoap/GetCompactDataRequest"/></con:call></con:operation><con:operation isOneWay="false" action="http://stats.oecd.org/OECDStatWS/SDMX/GetDatasetMetadata" name="GetDatasetMetadata" bindingOperationName="GetDatasetMetadata" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://stat.abs.gov.au/sdmxws/sdmx.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:sdmx="http://stats.oecd.org/OECDStatWS/SDMX/">
+   <soap:Header/>
+   <soap:Body>
+      <sdmx:GetDatasetMetadata>
+         <!--Optional:-->
+         <sdmx:QueryMessage>
+            <!--You may enter ANY elements at this point-->
+         </sdmx:QueryMessage>
+      </sdmx:GetDatasetMetadata>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://stats.oecd.org/OECDStatWS/SDMX/ABS.Stat_x0020_SDMX_x0020_web_x0020_serviceSoap/GetDatasetMetadataRequest"/></con:call></con:operation><con:operation isOneWay="false" action="http://stats.oecd.org/OECDStatWS/SDMX/GetDataStructureDefinition" name="GetDataStructureDefinition" bindingOperationName="GetDataStructureDefinition" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://stat.abs.gov.au/sdmxws/sdmx.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:sdmx="http://stats.oecd.org/OECDStatWS/SDMX/">
+   <soap:Header/>
+   <soap:Body>
+      <sdmx:GetDataStructureDefinition>
+         <!--Optional:-->
+         <message:QueryMessage xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/query" xmlns:message="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message" xsi:schemaLocation="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/query http://www.sdmx.org/docs/2_0/SDMXQuery.xsd 
+   http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message http://www.sdmx.org/docs/2_0/SDMXMessage.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Header xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message">
+		<ID>none</ID>
+		<Test>false</Test>
+		<Prepared>2013-02-14T08:06:51</Prepared>
+		<Sender id="YourID">
+			<Name xml:lang="en">Your English Name</Name>
+		</Sender>
+		<Receiver id="ABS">
+			<Name xml:lang="en">Australian Bureau of Statistics</Name>
+			<Name xml:lang="fr">Australian Bureau of Statistics</Name>
+		</Receiver>
+		<!--
+    <message:DataSetAction>Replace</message:DataSetAction>
+    <message:ReportingBegin>2007-02-22T00:00:00</message:ReportingBegin>
+    -->
+	</Header>
+	<message:Query>
+		<KeyFamilyWhere>
+			<Or>
+        
+        <!-- 
+        To return a list of all available dataset codes remove the <keyfamily> tag and have 
+        nothing between the <or> tags
+        -->
+      
+				
+									
+			</Or>
+		</KeyFamilyWhere>
+	</message:Query>
+</message:QueryMessage>
+      </sdmx:GetDataStructureDefinition>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://stats.oecd.org/OECDStatWS/SDMX/ABS.Stat_x0020_SDMX_x0020_web_x0020_serviceSoap/GetDataStructureDefinitionRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation isOneWay="false" action="http://stats.oecd.org/OECDStatWS/SDMX/GetDimensionMemberMetadata" name="GetDimensionMemberMetadata" bindingOperationName="GetDimensionMemberMetadata" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://stat.abs.gov.au/sdmxws/sdmx.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:sdmx="http://stats.oecd.org/OECDStatWS/SDMX/">
+   <soap:Header/>
+   <soap:Body>
+      <sdmx:GetDimensionMemberMetadata>
+         <!--Optional:-->
+         <sdmx:QueryMessage>
+            <!--You may enter ANY elements at this point-->
+         </sdmx:QueryMessage>
+      </sdmx:GetDimensionMemberMetadata>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://stats.oecd.org/OECDStatWS/SDMX/ABS.Stat_x0020_SDMX_x0020_web_x0020_serviceSoap/GetDimensionMemberMetadataRequest"/></con:call></con:operation><con:operation isOneWay="false" action="http://stats.oecd.org/OECDStatWS/SDMX/GetDimensionMetadata" name="GetDimensionMetadata" bindingOperationName="GetDimensionMetadata" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://stat.abs.gov.au/sdmxws/sdmx.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:sdmx="http://stats.oecd.org/OECDStatWS/SDMX/">
+   <soap:Header/>
+   <soap:Body>
+      <sdmx:GetDimensionMetadata>
+         <!--Optional:-->
+         <sdmx:QueryMessage>
+            <!--You may enter ANY elements at this point-->
+         </sdmx:QueryMessage>
+      </sdmx:GetDimensionMetadata>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://stats.oecd.org/OECDStatWS/SDMX/ABS.Stat_x0020_SDMX_x0020_web_x0020_serviceSoap/GetDimensionMetadataRequest"/></con:call></con:operation><con:operation isOneWay="false" action="http://stats.oecd.org/OECDStatWS/SDMX/GetGenericData" name="GetGenericData" bindingOperationName="GetGenericData" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://stat.abs.gov.au/sdmxws/sdmx.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:sdmx="http://stats.oecd.org/OECDStatWS/SDMX/">
+   <soap:Header/>
+   <soap:Body>
+      <sdmx:GetGenericData>
+         <!--Optional:-->
+         <sdmx:QueryMessage>
+            <message:QueryMessage xsi:schemaLocation="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/query http://www.sdmx.org/docs/2_0/SDMXQuery.xsd http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message http://www.sdmx.org/docs/2_0/SDMXMessage.xsd" xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/query" xmlns:message="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+               <Header xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message">
+                  <ID>none</ID>
+                  <Test>false</Test>
+                  <Truncated>false</Truncated>
+                  <Prepared>2013-06-01T16:23:30</Prepared>
+                  <Sender id="YourID">
+                     <Name xml:lang="en">Your English Name</Name>
+                  </Sender>
+                  <Receiver id="ABS">
+                     <Name xml:lang="en">Australian Bureau of Statistics</Name>
+                     <Name xml:lang="fr">Australian Bureau of Statistics</Name>
+                  </Receiver>
+               </Header>
+               <Query xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message">
+                  <DataWhere xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/query">
+                     <And>
+                        <DataSet>BA_SA2</DataSet>
+                        <Dimension id="FREQUENCY">M</Dimension>
+                        <Attribute id="TIME_FORMAT">P1M</Attribute>
+                        <Time>
+                           <StartTime>2012-10</StartTime>
+                           <EndTime>2013-03</EndTime>
+                        </Time>
+                        <Or>
+                           <Dimension id="MEASURE">1</Dimension>
+                           <Dimension id="MEASURE">2</Dimension>
+                        </Or>
+                        <Or>
+                           <Dimension id="SECTOR">1</Dimension>
+                           <Dimension id="SECTOR">5</Dimension>
+                           <Dimension id="SECTOR">9</Dimension>
+                        </Or>
+                        <Or>
+                           <Dimension id="WORK">1</Dimension>
+                           <Dimension id="WORK">2</Dimension>
+                           <Dimension id="WORK">7</Dimension>
+                           <Dimension id="WORK">8</Dimension>
+                           <Dimension id="WORK">9</Dimension>
+                        </Or>
+                        <Or>
+                           <Dimension id="BUILDING">110</Dimension>
+                           <Dimension id="BUILDING">121</Dimension>
+                           <Dimension id="BUILDING">122</Dimension>
+                           <Dimension id="BUILDING">120</Dimension>
+                           <Dimension id="BUILDING">131</Dimension>
+                           <Dimension id="BUILDING">132</Dimension>
+                           <Dimension id="BUILDING">133</Dimension>
+                           <Dimension id="BUILDING">130</Dimension>
+                           <Dimension id="BUILDING">150</Dimension>
+                           <Dimension id="BUILDING">100</Dimension>
+                           <Dimension id="BUILDING">210</Dimension>
+                           <Dimension id="BUILDING">220</Dimension>
+                           <Dimension id="BUILDING">230</Dimension>
+                           <Dimension id="BUILDING">290</Dimension>
+                           <Dimension id="BUILDING">200</Dimension>
+                           <Dimension id="BUILDING">310</Dimension>
+                           <Dimension id="BUILDING">320</Dimension>
+                           <Dimension id="BUILDING">330</Dimension>
+                           <Dimension id="BUILDING">390</Dimension>
+                           <Dimension id="BUILDING">300</Dimension>
+                           <Dimension id="BUILDING">410</Dimension>
+                           <Dimension id="BUILDING">420</Dimension>
+                           <Dimension id="BUILDING">430</Dimension>
+                           <Dimension id="BUILDING">440</Dimension>
+                           <Dimension id="BUILDING">450</Dimension>
+                           <Dimension id="BUILDING">460</Dimension>
+                           <Dimension id="BUILDING">490</Dimension>
+                           <Dimension id="BUILDING">400</Dimension>
+                           <Dimension id="BUILDING">700</Dimension>
+                           <Dimension id="BUILDING">800</Dimension>
+                           <Dimension id="BUILDING">850</Dimension>
+                           <Dimension id="BUILDING">999</Dimension>
+                        </Or>
+                        <Or>
+                           <Dimension id="REGION">801051049</Dimension>
+                           <Dimension id="REGION">801051050</Dimension>
+                           <Dimension id="REGION">801051051</Dimension>
+                        </Or>
+                     </And>
+                  </DataWhere>
+               </Query>
+            </message:QueryMessage>
+         </sdmx:QueryMessage>
+      </sdmx:GetGenericData>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://stats.oecd.org/OECDStatWS/SDMX/ABS.Stat_x0020_SDMX_x0020_web_x0020_serviceSoap/GetGenericDataRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation isOneWay="false" action="http://stats.oecd.org/OECDStatWS/SDMX/GetMetadata" name="GetMetadata" bindingOperationName="GetMetadata" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://stat.abs.gov.au/sdmxws/sdmx.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:sdmx="http://stats.oecd.org/OECDStatWS/SDMX/">
+   <soap:Header/>
+   <soap:Body>
+      <sdmx:GetMetadata>
+         <!--Optional:-->
+         <sdmx:QueryMessage>
+            <!--You may enter ANY elements at this point-->
+         </sdmx:QueryMessage>
+      </sdmx:GetMetadata>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://stats.oecd.org/OECDStatWS/SDMX/ABS.Stat_x0020_SDMX_x0020_web_x0020_serviceSoap/GetMetadataRequest"/></con:call></con:operation><con:operation isOneWay="false" action="http://stats.oecd.org/OECDStatWS/SDMX/GetMetadataStructure" name="GetMetadataStructure" bindingOperationName="GetMetadataStructure" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://stat.abs.gov.au/sdmxws/sdmx.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:sdmx="http://stats.oecd.org/OECDStatWS/SDMX/">
+   <soap:Header/>
+   <soap:Body>
+      <sdmx:GetMetadataStructure>
+         <!--Optional:-->
+         <sdmx:XmlQuery>
+            <!--You may enter ANY elements at this point-->
+         </sdmx:XmlQuery>
+      </sdmx:GetMetadataStructure>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://stats.oecd.org/OECDStatWS/SDMX/ABS.Stat_x0020_SDMX_x0020_web_x0020_serviceSoap/GetMetadataStructureRequest"/></con:call></con:operation><con:operation isOneWay="false" action="http://stats.oecd.org/OECDStatWS/SDMX/GetReferenceMetadata" name="GetReferenceMetadata" bindingOperationName="GetReferenceMetadata" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://stat.abs.gov.au/sdmxws/sdmx.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:sdmx="http://stats.oecd.org/OECDStatWS/SDMX/">
+   <soap:Header/>
+   <soap:Body>
+      <sdmx:GetReferenceMetadata>
+         <!--Optional:-->
+         <sdmx:XmlQuery>
+            <!--You may enter ANY elements at this point-->
+         </sdmx:XmlQuery>
+      </sdmx:GetReferenceMetadata>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://stats.oecd.org/OECDStatWS/SDMX/ABS.Stat_x0020_SDMX_x0020_web_x0020_serviceSoap/GetReferenceMetadataRequest"/></con:call></con:operation></con:interface><con:testSuite name="ABS.Stat_x0020_SDMX_x0020_web_x0020_serviceSoap TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetCompactData TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="GetCompactData"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ABS.Stat_x0020_SDMX_x0020_web_x0020_serviceSoap</con:interface><con:operation>GetCompactData</con:operation><con:request name="GetCompactData"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://stat.abs.gov.au/sdmxws/sdmx.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sdmx="http://stats.oecd.org/OECDStatWS/SDMX/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sdmx:GetCompactData>
+         <!--Optional:-->
+         <sdmx:QueryMessage>
+            <!--You may enter ANY elements at this point-->
+         </sdmx:QueryMessage>
+      </sdmx:GetCompactData>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:wsaConfig action="http://stats.oecd.org/OECDStatWS/SDMX/GetCompactData"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetDatasetMetadata TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="GetDatasetMetadata"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ABS.Stat_x0020_SDMX_x0020_web_x0020_serviceSoap</con:interface><con:operation>GetDatasetMetadata</con:operation><con:request name="GetDatasetMetadata"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://stat.abs.gov.au/sdmxws/sdmx.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sdmx="http://stats.oecd.org/OECDStatWS/SDMX/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sdmx:GetDatasetMetadata>
+         <!--Optional:-->
+         <sdmx:QueryMessage>
+            <!--You may enter ANY elements at this point-->
+         </sdmx:QueryMessage>
+      </sdmx:GetDatasetMetadata>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:wsaConfig action="http://stats.oecd.org/OECDStatWS/SDMX/GetDatasetMetadata"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetDataStructureDefinition TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="GetDataStructureDefinition"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ABS.Stat_x0020_SDMX_x0020_web_x0020_serviceSoap</con:interface><con:operation>GetDataStructureDefinition</con:operation><con:request name="GetDataStructureDefinition"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://stat.abs.gov.au/sdmxws/sdmx.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sdmx="http://stats.oecd.org/OECDStatWS/SDMX/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sdmx:GetDataStructureDefinition>
+         <!--Optional:-->
+         <sdmx:QueryMessage>
+            <!--You may enter ANY elements at this point-->
+         </sdmx:QueryMessage>
+      </sdmx:GetDataStructureDefinition>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:wsaConfig action="http://stats.oecd.org/OECDStatWS/SDMX/GetDataStructureDefinition"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetDimensionMemberMetadata TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="GetDimensionMemberMetadata"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ABS.Stat_x0020_SDMX_x0020_web_x0020_serviceSoap</con:interface><con:operation>GetDimensionMemberMetadata</con:operation><con:request name="GetDimensionMemberMetadata"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://stat.abs.gov.au/sdmxws/sdmx.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sdmx="http://stats.oecd.org/OECDStatWS/SDMX/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sdmx:GetDimensionMemberMetadata>
+         <!--Optional:-->
+         <sdmx:QueryMessage>
+            <!--You may enter ANY elements at this point-->
+         </sdmx:QueryMessage>
+      </sdmx:GetDimensionMemberMetadata>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:wsaConfig action="http://stats.oecd.org/OECDStatWS/SDMX/GetDimensionMemberMetadata"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetDimensionMetadata TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="GetDimensionMetadata"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ABS.Stat_x0020_SDMX_x0020_web_x0020_serviceSoap</con:interface><con:operation>GetDimensionMetadata</con:operation><con:request name="GetDimensionMetadata"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://stat.abs.gov.au/sdmxws/sdmx.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sdmx="http://stats.oecd.org/OECDStatWS/SDMX/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sdmx:GetDimensionMetadata>
+         <!--Optional:-->
+         <sdmx:QueryMessage>
+            <!--You may enter ANY elements at this point-->
+         </sdmx:QueryMessage>
+      </sdmx:GetDimensionMetadata>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:wsaConfig action="http://stats.oecd.org/OECDStatWS/SDMX/GetDimensionMetadata"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetGenericData TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="GetGenericData"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ABS.Stat_x0020_SDMX_x0020_web_x0020_serviceSoap</con:interface><con:operation>GetGenericData</con:operation><con:request name="GetGenericData"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://stat.abs.gov.au/sdmxws/sdmx.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sdmx="http://stats.oecd.org/OECDStatWS/SDMX/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sdmx:GetGenericData>
+         <!--Optional:-->
+         <sdmx:QueryMessage>
+            <!--You may enter ANY elements at this point-->
+         </sdmx:QueryMessage>
+      </sdmx:GetGenericData>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:wsaConfig action="http://stats.oecd.org/OECDStatWS/SDMX/GetGenericData"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetMetadata TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="GetMetadata"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ABS.Stat_x0020_SDMX_x0020_web_x0020_serviceSoap</con:interface><con:operation>GetMetadata</con:operation><con:request name="GetMetadata"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://stat.abs.gov.au/sdmxws/sdmx.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sdmx="http://stats.oecd.org/OECDStatWS/SDMX/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sdmx:GetMetadata>
+         <!--Optional:-->
+         <sdmx:QueryMessage>
+            <!--You may enter ANY elements at this point-->
+         </sdmx:QueryMessage>
+      </sdmx:GetMetadata>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:wsaConfig action="http://stats.oecd.org/OECDStatWS/SDMX/GetMetadata"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetMetadataStructure TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="GetMetadataStructure"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ABS.Stat_x0020_SDMX_x0020_web_x0020_serviceSoap</con:interface><con:operation>GetMetadataStructure</con:operation><con:request name="GetMetadataStructure"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://stat.abs.gov.au/sdmxws/sdmx.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sdmx="http://stats.oecd.org/OECDStatWS/SDMX/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sdmx:GetMetadataStructure>
+         <!--Optional:-->
+         <sdmx:XmlQuery>
+            <!--You may enter ANY elements at this point-->
+         </sdmx:XmlQuery>
+      </sdmx:GetMetadataStructure>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:wsaConfig action="http://stats.oecd.org/OECDStatWS/SDMX/GetMetadataStructure"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetReferenceMetadata TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="GetReferenceMetadata"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ABS.Stat_x0020_SDMX_x0020_web_x0020_serviceSoap</con:interface><con:operation>GetReferenceMetadata</con:operation><con:request name="GetReferenceMetadata"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://stat.abs.gov.au/sdmxws/sdmx.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sdmx="http://stats.oecd.org/OECDStatWS/SDMX/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sdmx:GetReferenceMetadata>
+         <!--Optional:-->
+         <sdmx:XmlQuery>
+            <!--You may enter ANY elements at this point-->
+         </sdmx:XmlQuery>
+      </sdmx:GetReferenceMetadata>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:wsaConfig action="http://stats.oecd.org/OECDStatWS/SDMX/GetReferenceMetadata"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:testSuite name="ABS.Stat_x0020_SDMX_x0020_web_x0020_serviceSoap12 TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetCompactData TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="GetCompactData"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ABS.Stat_x0020_SDMX_x0020_web_x0020_serviceSoap12</con:interface><con:operation>GetCompactData</con:operation><con:request name="GetCompactData"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://stat.abs.gov.au/sdmxws/sdmx.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:sdmx="http://stats.oecd.org/OECDStatWS/SDMX/">
+   <soap:Header/>
+   <soap:Body>
+      <sdmx:GetCompactData>
+         <!--Optional:-->
+         <sdmx:QueryMessage>
+            <!--You may enter ANY elements at this point-->
+         </sdmx:QueryMessage>
+      </sdmx:GetCompactData>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:wsaConfig action="http://stats.oecd.org/OECDStatWS/SDMX/ABS.Stat_x0020_SDMX_x0020_web_x0020_serviceSoap/GetCompactDataRequest"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetDatasetMetadata TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="GetDatasetMetadata"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ABS.Stat_x0020_SDMX_x0020_web_x0020_serviceSoap12</con:interface><con:operation>GetDatasetMetadata</con:operation><con:request name="GetDatasetMetadata"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://stat.abs.gov.au/sdmxws/sdmx.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:sdmx="http://stats.oecd.org/OECDStatWS/SDMX/">
+   <soap:Header/>
+   <soap:Body>
+      <sdmx:GetDatasetMetadata>
+         <!--Optional:-->
+         <sdmx:QueryMessage>
+            <!--You may enter ANY elements at this point-->
+         </sdmx:QueryMessage>
+      </sdmx:GetDatasetMetadata>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:wsaConfig action="http://stats.oecd.org/OECDStatWS/SDMX/ABS.Stat_x0020_SDMX_x0020_web_x0020_serviceSoap/GetDatasetMetadataRequest"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetDataStructureDefinition TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="GetDataStructureDefinition"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ABS.Stat_x0020_SDMX_x0020_web_x0020_serviceSoap12</con:interface><con:operation>GetDataStructureDefinition</con:operation><con:request name="GetDataStructureDefinition"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://stat.abs.gov.au/sdmxws/sdmx.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:sdmx="http://stats.oecd.org/OECDStatWS/SDMX/">
+   <soap:Header/>
+   <soap:Body>
+      <sdmx:GetDataStructureDefinition>
+         <!--Optional:-->
+         <sdmx:QueryMessage>
+            <!--You may enter ANY elements at this point-->
+         </sdmx:QueryMessage>
+      </sdmx:GetDataStructureDefinition>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:wsaConfig action="http://stats.oecd.org/OECDStatWS/SDMX/ABS.Stat_x0020_SDMX_x0020_web_x0020_serviceSoap/GetDataStructureDefinitionRequest"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetDimensionMemberMetadata TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="GetDimensionMemberMetadata"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ABS.Stat_x0020_SDMX_x0020_web_x0020_serviceSoap12</con:interface><con:operation>GetDimensionMemberMetadata</con:operation><con:request name="GetDimensionMemberMetadata"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://stat.abs.gov.au/sdmxws/sdmx.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:sdmx="http://stats.oecd.org/OECDStatWS/SDMX/">
+   <soap:Header/>
+   <soap:Body>
+      <sdmx:GetDimensionMemberMetadata>
+         <!--Optional:-->
+         <sdmx:QueryMessage>
+            <!--You may enter ANY elements at this point-->
+         </sdmx:QueryMessage>
+      </sdmx:GetDimensionMemberMetadata>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:wsaConfig action="http://stats.oecd.org/OECDStatWS/SDMX/ABS.Stat_x0020_SDMX_x0020_web_x0020_serviceSoap/GetDimensionMemberMetadataRequest"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetDimensionMetadata TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="GetDimensionMetadata"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ABS.Stat_x0020_SDMX_x0020_web_x0020_serviceSoap12</con:interface><con:operation>GetDimensionMetadata</con:operation><con:request name="GetDimensionMetadata"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://stat.abs.gov.au/sdmxws/sdmx.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:sdmx="http://stats.oecd.org/OECDStatWS/SDMX/">
+   <soap:Header/>
+   <soap:Body>
+      <sdmx:GetDimensionMetadata>
+         <!--Optional:-->
+         <sdmx:QueryMessage>
+            <!--You may enter ANY elements at this point-->
+         </sdmx:QueryMessage>
+      </sdmx:GetDimensionMetadata>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:wsaConfig action="http://stats.oecd.org/OECDStatWS/SDMX/ABS.Stat_x0020_SDMX_x0020_web_x0020_serviceSoap/GetDimensionMetadataRequest"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetGenericData TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="GetGenericData"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ABS.Stat_x0020_SDMX_x0020_web_x0020_serviceSoap12</con:interface><con:operation>GetGenericData</con:operation><con:request name="GetGenericData"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://stat.abs.gov.au/sdmxws/sdmx.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:sdmx="http://stats.oecd.org/OECDStatWS/SDMX/">
+   <soap:Header/>
+   <soap:Body>
+      <sdmx:GetGenericData>
+         <!--Optional:-->
+         <sdmx:QueryMessage>
+            <!--You may enter ANY elements at this point-->
+         </sdmx:QueryMessage>
+      </sdmx:GetGenericData>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:wsaConfig action="http://stats.oecd.org/OECDStatWS/SDMX/ABS.Stat_x0020_SDMX_x0020_web_x0020_serviceSoap/GetGenericDataRequest"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetMetadata TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="GetMetadata"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ABS.Stat_x0020_SDMX_x0020_web_x0020_serviceSoap12</con:interface><con:operation>GetMetadata</con:operation><con:request name="GetMetadata"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://stat.abs.gov.au/sdmxws/sdmx.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:sdmx="http://stats.oecd.org/OECDStatWS/SDMX/">
+   <soap:Header/>
+   <soap:Body>
+      <sdmx:GetMetadata>
+         <!--Optional:-->
+         <sdmx:QueryMessage>
+            <!--You may enter ANY elements at this point-->
+         </sdmx:QueryMessage>
+      </sdmx:GetMetadata>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:wsaConfig action="http://stats.oecd.org/OECDStatWS/SDMX/ABS.Stat_x0020_SDMX_x0020_web_x0020_serviceSoap/GetMetadataRequest"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetMetadataStructure TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="GetMetadataStructure"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ABS.Stat_x0020_SDMX_x0020_web_x0020_serviceSoap12</con:interface><con:operation>GetMetadataStructure</con:operation><con:request name="GetMetadataStructure"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://stat.abs.gov.au/sdmxws/sdmx.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:sdmx="http://stats.oecd.org/OECDStatWS/SDMX/">
+   <soap:Header/>
+   <soap:Body>
+      <sdmx:GetMetadataStructure>
+         <!--Optional:-->
+         <sdmx:XmlQuery>
+            <!--You may enter ANY elements at this point-->
+         </sdmx:XmlQuery>
+      </sdmx:GetMetadataStructure>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:wsaConfig action="http://stats.oecd.org/OECDStatWS/SDMX/ABS.Stat_x0020_SDMX_x0020_web_x0020_serviceSoap/GetMetadataStructureRequest"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetReferenceMetadata TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="GetReferenceMetadata"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ABS.Stat_x0020_SDMX_x0020_web_x0020_serviceSoap12</con:interface><con:operation>GetReferenceMetadata</con:operation><con:request name="GetReferenceMetadata"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://stat.abs.gov.au/sdmxws/sdmx.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:sdmx="http://stats.oecd.org/OECDStatWS/SDMX/">
+   <soap:Header/>
+   <soap:Body>
+      <sdmx:GetReferenceMetadata>
+         <!--Optional:-->
+         <sdmx:XmlQuery>
+            <!--You may enter ANY elements at this point-->
+         </sdmx:XmlQuery>
+      </sdmx:GetReferenceMetadata>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:wsaConfig action="http://stats.oecd.org/OECDStatWS/SDMX/ABS.Stat_x0020_SDMX_x0020_web_x0020_serviceSoap/GetReferenceMetadataRequest"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/></con:soapui-project>
