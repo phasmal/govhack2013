@@ -19,4 +19,15 @@
         <servlet-name>DataServlet</servlet-name>
         <url-pattern>/2010/item/19/*</url-pattern>
     </servlet-mapping>
+    
+    <filter>
+        <filter-name>CORS</filter-name>
+        <filter-class>com.thetransactioncompany.cors.CORSFilter</filter-class>
+    </filter>
+    
+    <filter-mapping>
+        <filter-name>CORS</filter-name>
+        <servlet-name>DataServlet</servlet-name>
+    </filter-mapping>
+
 </web-app>
