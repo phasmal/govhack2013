@@ -23,6 +23,11 @@ import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
+import javax.xml.xpath.XPath;
+import javax.xml.xpath.XPathConstants;
+import javax.xml.xpath.XPathExpression;
+import javax.xml.xpath.XPathExpressionException;
+import javax.xml.xpath.XPathFactory;
 import knowyourcountry.abs.ABSStatX0020SDMXX0020WebX0020Service;
 import knowyourcountry.abs.GetGenericData;
 import knowyourcountry.abs.GetGenericDataResponse;
@@ -53,8 +58,7 @@ public class DataServlet extends HttpServlet
         GetGenericDataResponse.GetGenericDataResult result
             = service.getABSStatX0020SDMXX0020WebX0020ServiceSoap().getGenericData(qm);
         
-        ElementNSImpl el = ((ElementNSImpl)result.getAny());
-        out.print(toString(el.getChildNodes()));
+        out.print(toString((Node) result.getAny()));
         out.flush();
         out.close();
     }
@@ -94,23 +98,51 @@ public class DataServlet extends HttpServlet
         
     }
     
+    private NodeList xpathToNodeList(String expression, Node target) throws ServletException
+    {
+        try
+        {
+            XPathExpression xpe = newXpathExpression(expression);
+            return (NodeList) xpe.evaluate(target, XPathConstants.NODESET);
+        }
+        catch (XPathExpressionException e)
+        {
+            throw new ServletException(e);
+        }
+    }
+    
     private Document docFromResource(String resourcePath) throws ServletException, IOException
     {
         try
         {
-            DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
-            DocumentBuilder db = dbf.newDocumentBuilder();
-            Document doc = db.parse(getClass().getResourceAsStream(resourcePath));
-            return doc;
-        }
-        catch (ParserConfigurationException e)
-        {
-            throw new ServletException(e);
+            return newDocumentBuilder().parse(getClass().getResourceAsStream(resourcePath));
         }
         catch (SAXException e)
         {
             throw new ServletException(e);
         }
+    }
+
+    private DocumentBuilder newDocumentBuilder() throws ServletException
+    {
+        try
+        {
+            DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+            return dbf.newDocumentBuilder();
+        }
+        catch (ParserConfigurationException e)
+        {
+            throw new ServletException(e);
+        }
+    }
+
+    private XPathExpression newXpathExpression(String expression) throws XPathExpressionException
+    {
+        XPathExpression xpe;
+        XPathFactory xpf = XPathFactory.newInstance();
+        XPath xp = xpf.newXPath();
+        xpe = xp.compile(expression);
+        return xpe;
     }
     
     
