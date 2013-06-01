@@ -17,6 +17,6 @@
     
     <servlet-mapping>
         <servlet-name>DataServlet</servlet-name>
-        <url-pattern>/*</url-pattern>
+        <url-pattern>/2010/item/19/*</url-pattern>
     </servlet-mapping>
 </web-app>
