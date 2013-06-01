@@ -44,6 +44,7 @@ import knowyourcountry.abs.GetGenericDataResponse;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.w3c.dom.Document;
+import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
@@ -58,7 +59,7 @@ public class DataServlet extends HttpServlet
                 map("m", "http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message",
                     "g", "http://www.SDMX.org/resources/SDMXML/schemas/v2_0/generic",
                     "s", "http://www.SDMX.org/resources/SDMXML/schemas/v2_0/structure",
-                    "x", "http://www.w3.org/XML/1998/namespace"));
+                    "xml", "http://www.w3.org/XML/1998/namespace"));
     
     private static Index index = null;
     
@@ -135,8 +136,9 @@ public class DataServlet extends HttpServlet
             if (!value.equals("NaN"))
             {
                 JSONObject jo = new JSONObject();
-                String region = xpathToString("g:SeriesKey/g:Value[@concept='ASGC_2008']/@value", match.item(i), namespaces);
-                jo.put("region", getIndex().get(region));
+                String regionCode = xpathToString("g:SeriesKey/g:Value[@concept='ASGC_2008']/@value", match.item(i), namespaces);
+                Index.Region r = getIndex().get(regionCode);
+                jo.put("region", r == null ? null : r.toJson());
                 jo.put("value", value);
                 ja.add(jo);
             }
@@ -163,18 +165,37 @@ public class DataServlet extends HttpServlet
         
             Index idx = new Index();
         
-            NodeList match = xpathToNodeList("/s:Structure/s:CodeLists/s:CodeList[@id='CL_BA_SA2_REGION']/s:Code", body, namespaces);
+            //System.err.println("X=" + toString(xpathToNodeList("/m:Structure/m:CodeLists/s:CodeList", body, namespaces)));
+            
+            NodeList match = xpathToNodeList("/m:Structure/m:CodeLists/s:CodeList[@id='CL_NRP7_ASGC_2008']/s:Code", body, namespaces);
 
             for (int i = 0; i < match.getLength(); i++)
             {
                 Node item = match.item(i);
-                String code = xpathToString("@code", item, namespaces);
+                String code = xpathToString("@value", item, namespaces);
                 String parentCode = xpathToString("@parentCode", item, namespaces);
-                String name = xpathToString("s:Description[x:lang='en']/text()", item, namespaces);
+                
+                String name = null;
+                NodeList descs = xpathToNodeList("s:Description", item, namespaces);
+                for (int j = 0; j < descs.getLength(); j++)
+                {
+                    Node d = descs.item(j);
+                    
+                    NamedNodeMap attrs = d.getAttributes();
+                    for (int k = 0; k < attrs.getLength(); k++)
+                    {
+                        Node a = attrs.item(k);
+                        if (a.getPrefix().equals("xml") && a.getLocalName().equals("lang") && a.getTextContent().equals("en"))
+                        {
+                            name = d.getTextContent();
+                        }
+                    }
+                }
+//                System.err.println("item : " + new Index.Region(code, parentCode,name).toJson().toJSONString());
                 idx.addRegion(code, parentCode, name);
-            }
-            System.err.println("Index:");
-            System.err.println(idx);
+            } 
+//            System.err.println("Index:");
+//            System.err.println(idx);
             return idx;
         }
         catch (ServletException e)
