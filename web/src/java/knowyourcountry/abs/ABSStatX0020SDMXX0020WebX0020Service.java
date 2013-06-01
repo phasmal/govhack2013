@@ -86,6 +86,28 @@ public class ABSStatX0020SDMXX0020WebX0020Service
         return super.getPort(new QName("http://stats.oecd.org/OECDStatWS/SDMX/", "ABS.Stat_x0020_SDMX_x0020_web_x0020_serviceSoap"), ABSStatX0020SDMXX0020WebX0020ServiceSoap.class, features);
     }
 
+    /**
+     * 
+     * @return
+     *     returns ABSStatX0020SDMXX0020WebX0020ServiceSoap
+     */
+    @WebEndpoint(name = "ABS.Stat_x0020_SDMX_x0020_web_x0020_serviceSoap12")
+    public ABSStatX0020SDMXX0020WebX0020ServiceSoap getABSStatX0020SDMXX0020WebX0020ServiceSoap12() {
+        return super.getPort(new QName("http://stats.oecd.org/OECDStatWS/SDMX/", "ABS.Stat_x0020_SDMX_x0020_web_x0020_serviceSoap12"), ABSStatX0020SDMXX0020WebX0020ServiceSoap.class);
+    }
+
+    /**
+     * 
+     * @param features
+     *     A list of {@link javax.xml.ws.WebServiceFeature} to configure on the proxy.  Supported features not in the <code>features</code> parameter will have their default values.
+     * @return
+     *     returns ABSStatX0020SDMXX0020WebX0020ServiceSoap
+     */
+    @WebEndpoint(name = "ABS.Stat_x0020_SDMX_x0020_web_x0020_serviceSoap12")
+    public ABSStatX0020SDMXX0020WebX0020ServiceSoap getABSStatX0020SDMXX0020WebX0020ServiceSoap12(WebServiceFeature... features) {
+        return super.getPort(new QName("http://stats.oecd.org/OECDStatWS/SDMX/", "ABS.Stat_x0020_SDMX_x0020_web_x0020_serviceSoap12"), ABSStatX0020SDMXX0020WebX0020ServiceSoap.class, features);
+    }
+
     private static URL __getWsdlLocation() {
         if (ABSSTATX0020SDMXX0020WEBX0020SERVICE_EXCEPTION!= null) {
             throw ABSSTATX0020SDMXX0020WEBX0020SERVICE_EXCEPTION;
