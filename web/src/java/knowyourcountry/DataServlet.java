@@ -5,9 +5,12 @@
 package knowyourcountry;
 
 import com.sun.org.apache.xerces.internal.dom.ElementNSImpl;
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.io.StringWriter;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -98,6 +101,17 @@ public class DataServlet extends HttpServlet
         {
             resp.setContentType("application/json");
             out.print(getIndex());//.get(parts[1]));
+        }
+        else if (parts.length == 1
+            && parts[0].equals("act"))
+        {
+            URL data = new URL("https://www.data.act.gov.au/api/views/7522-y6uc/rows.json?");
+            BufferedReader br = new BufferedReader(new InputStreamReader(data.openStream()));
+            String l = br.readLine();
+            while(l != null)
+            {
+                out.print(l);
+            }
         }
         else if (parts.length >= 8
                  && parts[0].equals("region")
