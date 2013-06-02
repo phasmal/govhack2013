@@ -17,6 +17,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -62,15 +63,23 @@ public class DataServlet extends HttpServlet
                     "xml", "http://www.w3.org/XML/1998/namespace"));
     
     private static Index index = null;
+    private static String contextPath;
     
     private static synchronized Index getIndex()
     {
         if (index == null)
         {
-            index = loadIndex();
+            System.err.println("loading index");
+            index = loadIndex(contextPath);
+            System.err.println("done loading index");
         }
-        
         return index;
+    }
+    
+    public void init(ServletConfig config) throws ServletException
+    {
+        super.init(config);
+        contextPath = config.getServletContext().getContextPath();
     }
     
     public void doGet(HttpServletRequest req, HttpServletResponse resp)
@@ -88,7 +97,6 @@ public class DataServlet extends HttpServlet
             && parts[0].equals("region"))
         {
             resp.setContentType("application/json");
-            out.print(getIndex().get(parts[1]));
         }
         else if (parts.length >= 8
                  && parts[0].equals("region")
@@ -147,7 +155,7 @@ public class DataServlet extends HttpServlet
     }
     
     
-    private static Index loadIndex()
+    private static Index loadIndex(String contextBase)
     {
         try
         {
@@ -163,7 +171,7 @@ public class DataServlet extends HttpServlet
             
             Node body = (Node) result.getAny();
         
-            Index idx = new Index();
+            Index idx = new Index(contextBase);
         
             //System.err.println("X=" + toString(xpathToNodeList("/m:Structure/m:CodeLists/s:CodeList", body, namespaces)));
             
@@ -344,6 +352,12 @@ public class DataServlet extends HttpServlet
     public static class Index
     {
         private Map<String, Region> regions = new HashMap<String, Region>();
+        private String context;
+        
+        public Index(String contextBase)
+        {
+            this.context = contextBase;
+        }
         
         private void addRegion(String code, String parentCode, String name)
         {
