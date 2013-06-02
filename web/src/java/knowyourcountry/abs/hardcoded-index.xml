@@ -1,0 +1,10 @@
+<message:QueryMessage xsi:schemaLocation="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/query http://www.sdmx.org/docs/2_0/SDMXQuery.xsd http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message http://www.sdmx.org/docs/2_0/SDMXMessage.xsd" xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/query" xmlns:message="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <Header xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message">
+      <Receiver id="ABS"/>
+   </Header>
+   <message:Query>
+      <KeyFamilyWhere>
+          <KeyFamily>NRP7</KeyFamily>
+      </KeyFamilyWhere>
+   </message:Query>
+</message:QueryMessage>

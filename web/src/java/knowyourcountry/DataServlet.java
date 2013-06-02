@@ -97,6 +97,7 @@ public class DataServlet extends HttpServlet
             && parts[0].equals("region"))
         {
             resp.setContentType("application/json");
+            out.print(getIndex());//.get(parts[1]));
         }
         else if (parts.length >= 8
                  && parts[0].equals("region")
