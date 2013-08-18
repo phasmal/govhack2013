@@ -972,17 +972,48 @@
          </sdmx:QueryMessage>
       </sdmx:GetGenericData>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://stats.oecd.org/OECDStatWS/SDMX/GetGenericData"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation isOneWay="false" action="http://stats.oecd.org/OECDStatWS/SDMX/GetMetadata" name="GetMetadata" bindingOperationName="GetMetadata" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://stat.abs.gov.au/sdmxws/sdmx.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sdmx="http://stats.oecd.org/OECDStatWS/SDMX/">
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://stats.oecd.org/OECDStatWS/SDMX/GetGenericData"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation isOneWay="false" action="http://stats.oecd.org/OECDStatWS/SDMX/GetMetadata" name="GetMetadata" bindingOperationName="GetMetadata" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="GetMetadata"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://stat.abs.gov.au/sdmxws/sdmx.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sdmx="http://stats.oecd.org/OECDStatWS/SDMX/">
    <soapenv:Header/>
    <soapenv:Body>
       <sdmx:GetMetadata>
          <!--Optional:-->
          <sdmx:QueryMessage>
-            <!--You may enter ANY elements at this point-->
+           <message:GenericMetadataQuery
+		    xmlns:message="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message" 
+		    xmlns:structure="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure" 
+		    xmlns:query="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/query" 
+		    xmlns:common="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common" 
+		    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="
+		http://www.sdmx.org/resources/sdmxml/schemas/v2_1/query SDMXQueryMetadata.xsd
+		http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message SDMXMessage.xsd">   
+		    <message:Header>
+		        <message:ID>REG_REQ007</message:ID>
+		        <message:Test>true</message:Test>
+		        <message:Prepared>2013-06-02T14:59:58</message:Prepared>
+		        <message:Sender id="YourID">
+		            <common:Name xml:lang="en">Your English Name</common:Name>
+		        </message:Sender>
+		        <message:Receiver id="ABS">
+		            <common:Name xml:lang="en">Australian Bureau of Statistics</common:Name>
+		            <common:Name xml:lang="fr">Australian Bureau of Statistics</common:Name>
+		        </message:Receiver>
+		    </message:Header>
+		    <message:Query>
+		        <query:ReturnDetails/>
+		        <query:MetadataParameters>
+		            <query:AttachedDataSet>
+		                <common:DataProvider>
+		                    <Ref id="ABS" maintainableParentID="" agencyID="ABS"/>
+		                </common:DataProvider>
+		                <common:ID>NRP7</common:ID>
+		            </query:AttachedDataSet>		
+		        </query:MetadataParameters>
+		    </message:Query>		
+		</message:GenericMetadataQuery>
          </sdmx:QueryMessage>
       </sdmx:GetMetadata>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://stats.oecd.org/OECDStatWS/SDMX/GetMetadata"/></con:call></con:operation><con:operation isOneWay="false" action="http://stats.oecd.org/OECDStatWS/SDMX/GetMetadataStructure" name="GetMetadataStructure" bindingOperationName="GetMetadataStructure" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://stat.abs.gov.au/sdmxws/sdmx.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sdmx="http://stats.oecd.org/OECDStatWS/SDMX/">
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://stats.oecd.org/OECDStatWS/SDMX/GetMetadata"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation isOneWay="false" action="http://stats.oecd.org/OECDStatWS/SDMX/GetMetadataStructure" name="GetMetadataStructure" bindingOperationName="GetMetadataStructure" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://stat.abs.gov.au/sdmxws/sdmx.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sdmx="http://stats.oecd.org/OECDStatWS/SDMX/">
    <soapenv:Header/>
    <soapenv:Body>
       <sdmx:GetMetadataStructure>
